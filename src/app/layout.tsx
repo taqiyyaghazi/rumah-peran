@@ -1,8 +1,8 @@
 import { inter } from '@/lib/fonts';
 import type { Metadata } from 'next';
 import './globals.css';
-import Navbar from '@/components/Navbar';
-import Tagline from '@/components/Tagline';
+import Navbar from '@/components/Navbar/Navbar';
+import Tagline from '@/components/Navbar/Tagline';
 
 export const metadata: Metadata = {
   title: 'Rumah Peran | Art & Entertaining School',
@@ -19,7 +19,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <Tagline />
         {children}
       </body>
     </html>
