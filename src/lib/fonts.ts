@@ -1,7 +1,8 @@
-import { Inter } from 'next/font/google';
+import { Inter, Roboto } from 'next/font/google';
 import localFont from 'next/font/local';
 
 export const inter = Inter({ subsets: ['latin'] });
+export const roboto = Roboto({ subsets: ['latin'], weight: ['500'] });
 export const gilroy = localFont({
   src: [
     {
@@ -17,6 +18,11 @@ export const gilroy = localFont({
     {
       path: '../fonts/Gilroy-Bold.ttf',
       weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/Gilroy-ExtraBold.ttf',
+      weight: '800',
       style: 'normal',
     },
   ],

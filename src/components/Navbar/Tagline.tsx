@@ -1,5 +1,4 @@
 import { inter } from '@/lib/fonts';
-import React from 'react';
 import Marquee from 'react-fast-marquee';
 
 const Tagline = () => {
