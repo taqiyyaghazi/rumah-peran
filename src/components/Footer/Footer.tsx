@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <footer>
       <div>
-        <div className="relative -z-10 h-16 overflow-hidden">
+        <div className="hidden md:block relative -z-10 h-16 overflow-hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="224"
             height="207"
             viewBox="0 0 224 207"
-            className="absolute top-8 left-8 rotate-45"
+            className="absolute top-8 left-8 2xl:left-72 rotate-45"
           >
             <path
               fillRule="evenodd"
@@ -26,7 +26,7 @@ const Footer = () => {
             width="224"
             height="207"
             viewBox="0 0 224 207"
-            className="absolute top-0 left-32"
+            className="absolute top-0 2xl:left-96 left-32"
           >
             <path
               fillRule="evenodd"
@@ -41,7 +41,7 @@ const Footer = () => {
             width="224"
             height="207"
             viewBox="0 0 224 207"
-            className="absolute top-8 right-8 -rotate-45"
+            className="absolute top-8 right-8 2xl:right-72 -rotate-45"
           >
             <path
               fillRule="evenodd"
@@ -55,7 +55,7 @@ const Footer = () => {
             width="224"
             height="207"
             viewBox="0 0 224 207"
-            className="absolute top-0 right-32"
+            className="absolute top-0 right-32 2xl:right-96"
           >
             <path
               fillRule="evenodd"
@@ -68,11 +68,11 @@ const Footer = () => {
       </div>
 
       <div className="bg-soft-cream px-8 xl:px-36 pb-16 pt-32">
-        <div className={`${roboto.className} flex items-center justify-between`}>
+        <div className={`${roboto.className} flex flex-col md:flex-row items-center justify-between gap-4`}>
           <div className="p-4">
             <Image src="/logo.svg" alt="logo" width={250} height={121} />
           </div>
-          <div className="flex items-start gap-8">
+          <div className="flex flex-col md:flex-row items-start gap-8">
             <div className='max-w-xs'>
               <p className="font-medium mb-2">Lokasi</p>
               <p className={gilroy.className}>
