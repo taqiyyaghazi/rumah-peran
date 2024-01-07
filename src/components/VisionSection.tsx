@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const VisionSection = () => {
   return (
-    <section className="py-16 px-8 xl:px-32 2xl:px-96 max-sm:flex max-sm:flex-col-reverse max-sm:items-center max-sm:gap-4 md:relative overflow-hidden">
+    <section className="py-16 mb-16 px-8 xl:px-32 2xl:px-96 max-sm:flex max-sm:flex-col-reverse max-sm:items-center max-sm:gap-4 md:relative overflow-hidden">
       <div className="max-w-2xl md:py-24">
         <h2 className={`${gilroy.className} font-extrabold text-2xl md:text-6xl`}>
           AMBILLAH <span className='text-rumah-peran-red'>PERANMU!</span>
