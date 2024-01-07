@@ -73,7 +73,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div>
-          <p className={`${inter.className} text-xl`}>
+          <p className={`${inter.className} text-base md:text-xl`}>
             Rumah Peran adalah lembaga pendidikan alternatif yang holistik
             berfokus pada pengembangan skill dan karakter setiap individu
             terutama dalam bidang Art & Entertainment.
