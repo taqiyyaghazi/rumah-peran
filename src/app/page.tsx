@@ -1,5 +1,6 @@
 import Button, { ColorType } from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
+import FavoriteProgramSection from '@/components/FavoriteProgramSection';
 import HeroSection from '@/components/HeroSection';
 import VisionSection from '@/components/VisionSection';
 import WhyUsSection from '@/components/WhyUsSection';
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <VisionSection />
       <WhyUsSection />
+      <FavoriteProgramSection />
 
       <CtaBox>
         <p
