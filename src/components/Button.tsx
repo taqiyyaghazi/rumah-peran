@@ -6,7 +6,7 @@ export enum ButtonType {
 }
 
 interface Props {
-  type: ButtonType;
+  type?: ButtonType;
   children: React.ReactNode;
   className?: string;
 }
@@ -27,7 +27,14 @@ const Button = ({
         </button>
       );
     default:
-      return <div>Button</div>;
+      return (
+        <button
+          className={`${gilroy.className} ${className} font-bold px-6 py-4 rounded-full bg-soft-cream text-rumah-peran-red`}
+          {...rest}
+        >
+          {children}
+        </button>
+      );
   }
 };
 
