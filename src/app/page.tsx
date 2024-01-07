@@ -2,6 +2,7 @@ import Button, { ColorType } from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
 import HeroSection from '@/components/HeroSection';
 import VisionSection from '@/components/VisionSection';
+import WhyUsSection from '@/components/WhyUsSection';
 import { gilroy } from '@/lib/fonts';
 import Image from 'next/image';
 
@@ -10,6 +11,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <VisionSection />
+      <WhyUsSection />
 
       <CtaBox>
         <p
