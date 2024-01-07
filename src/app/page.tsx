@@ -1,14 +1,15 @@
 import Button, { ColorType } from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
 import HeroSection from '@/components/HeroSection';
-import { gilroy, inter } from '@/lib/fonts';
+import VisionSection from '@/components/VisionSection';
+import { gilroy } from '@/lib/fonts';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
+      <VisionSection />
 
       <CtaBox>
         <p
