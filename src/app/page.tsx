@@ -2,6 +2,7 @@ import Button, { ColorType } from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
 import FavoriteProgramSection from '@/components/FavoriteProgramSection';
 import HeroSection from '@/components/HeroSection';
+import TestimoniSection from '@/components/TestimoniSection';
 import VisionSection from '@/components/VisionSection';
 import WhyUsSection from '@/components/WhyUsSection';
 import { gilroy } from '@/lib/fonts';
@@ -14,6 +15,7 @@ export default function Home() {
       <VisionSection />
       <WhyUsSection />
       <FavoriteProgramSection />
+      <TestimoniSection />
 
       <CtaBox>
         <p

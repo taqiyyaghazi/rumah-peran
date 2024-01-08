@@ -2,7 +2,7 @@ import { Inter, Roboto } from 'next/font/google';
 import localFont from 'next/font/local';
 
 export const inter = Inter({ subsets: ['latin'] });
-export const roboto = Roboto({ subsets: ['latin'], weight: ['500'] });
+export const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500'] });
 export const gilroy = localFont({
   src: [
     {
