@@ -81,7 +81,7 @@ const TestimoniSection = () => {
     },
   ];
   return (
-    <section className="px-4 xl:px-36 pt-16 bg-[url('/circle-bg.svg')] bg-no-repeat bg-center relative">
+    <section className="px-4 xl:px-36 py-16 bg-[url('/circle-bg.svg')] bg-no-repeat bg-center relative">
       <div className="mb-32">
         <h2
           className={`${gilroy.className} font-extrabold text-center text-rumah-peran-red text-2xl md:text-6xl mb-8`}
