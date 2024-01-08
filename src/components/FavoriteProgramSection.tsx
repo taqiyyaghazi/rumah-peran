@@ -80,7 +80,7 @@ const FavoriteProgramSection = () => {
       <div className="bg-contain bg-no-repeat bg-[url('/program-bg.svg')] flex-1 w-full md:w-2/3 lg:w-4/5 md:-mr-32 2xl:-mr-96 md:py-16 md:pl-16">
         <div
           ref={scrollProgramsRef}
-          className="flex flex-nowrap items-center gap-x-4 overflow-hidden overflow-x-scroll no-scrollbar snap-x"
+          className="flex flex-nowrap items-center gap-x-4 overflow-hidden overflow-x-scroll no-scrollbar snap-x md:pr-28 xl:pr-0"
         >
           <div className="w-20 md:hidden" />
           {programs.map((program) => (
