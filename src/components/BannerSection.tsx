@@ -36,10 +36,10 @@ const BannerSection = () => {
   };
 
   return (
-    <section className="px-4 xl:px-36 py-16 flex items-center justify-center gap-x-4">
+    <section className="px-4 xl:px-36 py-16 flex items-center justify-center gap-x-4 relative overflow-hidden">
       <div
         onClick={() => handleScrollBanner('left')}
-        className="flex items-center justify-center max-lg:hidden px-4 w-16 aspect-square cursor-pointer rounded-full border border-rumah-peran-red"
+        className="flex items-center justify-center max-lg:hidden bg-white px-4 w-16 aspect-square cursor-pointer rounded-full border border-rumah-peran-red"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -59,12 +59,12 @@ const BannerSection = () => {
       </div>
       <div
         ref={scrollBannerRef}
-        className="flex overflow-hidden overflow-x-scroll no-scrollbar w-[50rem] 2xl:w-[80rem] aspect-[11/4] snap-x snap-mandatory"
+        className="flex overflow-hidden overflow-x-scroll no-scrollbar w-[60rem] 2xl:w-[80rem] aspect-[11/4] snap-x snap-mandatory"
       >
         {banners.map(({ image, alt }, index) => (
           <div
             key={index}
-            className="snap-center flex-none relative lg:w-[50rem] 2xl:w-[80rem] aspect-[11/4] rounded-xl overflow-hidden"
+            className="snap-center flex-none relative lg:w-[60rem] 2xl:w-[80rem] aspect-[11/4] rounded-xl overflow-hidden"
           >
             <Image src={image} alt={alt} fill />
           </div>
@@ -72,7 +72,7 @@ const BannerSection = () => {
       </div>
       <div
         onClick={() => handleScrollBanner('right')}
-        className="flex items-center justify-center max-lg:hidden px-4 w-16 aspect-square cursor-pointer rounded-full border border-rumah-peran-red"
+        className="flex items-center justify-center max-lg:hidden bg-white px-4 w-16 aspect-square cursor-pointer rounded-full border border-rumah-peran-red"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -89,6 +89,12 @@ const BannerSection = () => {
             stroke-linejoin="round"
           />
         </svg>
+      </div>
+      <div className='absolute w-48 md:w-[30rem] aspect-[5/4] top-10 -left-32 md:-left-64 -z-30 opacity-20'>
+        <Image src="/squiggles-2.svg" alt='squiggles' fill />
+      </div>
+      <div className='absolute w-48 md:w-[30rem] aspect-[5/4] top-10 -right-32 md:-right-64 -z-30 opacity-20'>
+        <Image src="/squiggles-2.svg" alt='squiggles' fill />
       </div>
     </section>
   );
