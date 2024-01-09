@@ -1,3 +1,4 @@
+import BannerSection from '@/components/BannerSection';
 import Button, { ColorType } from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
 import ProgramHeroSection from '@/components/ProgramHeroSection';
@@ -8,6 +9,7 @@ export default function Program() {
   return (
     <main>
       <ProgramHeroSection />
+      <BannerSection />
       <CtaBox>
         <p
           className={`${gilroy.className} font-extrabold text-xl md:text-3xl text-center text-soft-cream mb-4`}
