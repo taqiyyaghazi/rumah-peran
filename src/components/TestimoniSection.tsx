@@ -1,85 +1,13 @@
 import { gilroy, roboto } from '@/lib/fonts';
+import { IPartners, ITestimonial } from '@/types';
 import Image from 'next/image';
 
-const TestimoniSection = () => {
-  const testimonials = [
-    {
-      id: 1,
-      image: '/dummy-avatar.svg',
-      name: 'Meatball melted',
-      message: 'Sed proin cursus mattis aliquam placerat. Diam tincidunt at.',
-    },
-    {
-      id: 2,
-      image: '/dummy-avatar.svg',
-      name: 'Meatball melted',
-      message:
-        'Morbi cursus commodo elit sed felis. Nunc libero velit nec hendrerit. Donec pulvinar ut rutrum facilisis nisl vulputate sit sed.',
-    },
-    {
-      id: 3,
-      image: '/dummy-avatar.svg',
-      name: 'Meatball melted',
-      message: 'Sed proin cursus mattis aliquam placerat. Diam tincidunt at.',
-    },
-    {
-      id: 4,
-      image: '/dummy-avatar.svg',
-      name: 'Meatball melted',
-      message: 'Sed proin cursus mattis aliquam placerat. Diam tincidunt at.',
-    },
-    {
-      id: 5,
-      image: '/dummy-avatar.svg',
-      name: 'Meatball melted',
-      message: 'Sed proin cursus mattis aliquam placerat. Diam tincidunt at.',
-    },
-    {
-      id: 6,
-      image: '/dummy-avatar.svg',
-      name: 'Meatball melted',
-      message: 'Sed proin cursus mattis aliquam placerat. Diam tincidunt at.',
-    },
-    {
-      id: 7,
-      image: '/dummy-avatar.svg',
-      name: 'Meatball melted',
-      message: 'Sed proin cursus mattis aliquam placerat. Diam tincidunt at.',
-    },
-    {
-      id: 8,
-      image: '/dummy-avatar.svg',
-      name: 'Meatball melted',
-      message: 'Sed proin cursus mattis aliquam placerat. Diam tincidunt at.',
-    },
-  ];
+interface Props {
+  testimonials: ITestimonial[];
+  partners: IPartners[];
+}
 
-  const companies = [
-    {
-      image: '/fosa-logo.svg',
-      name: 'Fosa Pictures',
-    },
-    {
-      image: '/starvision-logo.svg',
-      name: 'Starvision',
-    },
-    {
-      image: '/md-logo.svg',
-      name: 'MD Entertaintment',
-    },
-    {
-      image: '/paragon-logo.svg',
-      name: 'Paragon Pictures',
-    },
-    {
-      image: '/sdh-logo.svg',
-      name: 'Sekolah Dian Harapan',
-    },
-    {
-      image: '/unj-logo.svg',
-      name: 'Yayasan Pembina Universitas Negeri Jakarta',
-    },
-  ];
+const TestimoniSection = async ({ testimonials, partners }: Props) => {
   return (
     <section className="px-4 xl:px-36 py-16 bg-[url('/circle-bg.svg')] bg-no-repeat bg-center relative">
       <div className="mb-32">
@@ -108,16 +36,40 @@ const TestimoniSection = () => {
         </div>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
-        {companies.map(({ image, name }) => (
+        {partners.map(({ image, name }) => (
           <div key={name} className="w-32 h-20 md:w-40 md:h-24 relative">
             <Image src={image} alt={name} fill />
           </div>
         ))}
       </div>
-      <Image src="/ornament-1.svg" alt="ornament" width={100} height={100} className='absolute top-20 left-0 lg:top-32 lg:left-32 2xl:left-[36rem] -z-10'/>
-      <Image src="/ornament-2.svg" alt="ornament" width={100} height={100} className='absolute top-64 right-0 lg:top-32 lg:right-32 2xl:right-[36rem] -z-10'/>
-      <Image src="/ornament-2.svg" alt="ornament" width={100} height={100} className='absolute bottom-80 left-0 lg:bottom-32 lg:left-32 2xl:left-[36rem] -z-10'/>
-      <Image src="/ornament-1.svg" alt="ornament" width={100} height={100} className='absolute bottom-96 right-0 lg:bottom-32 lg:right-32 2xl:right-[36rem] -z-10'/>
+      <Image
+        src="/ornament-1.svg"
+        alt="ornament"
+        width={100}
+        height={100}
+        className="absolute top-20 left-0 lg:top-32 lg:left-32 2xl:left-[36rem] -z-10"
+      />
+      <Image
+        src="/ornament-2.svg"
+        alt="ornament"
+        width={100}
+        height={100}
+        className="absolute top-64 right-0 lg:top-32 lg:right-32 2xl:right-[36rem] -z-10"
+      />
+      <Image
+        src="/ornament-2.svg"
+        alt="ornament"
+        width={100}
+        height={100}
+        className="absolute bottom-80 left-0 lg:bottom-32 lg:left-32 2xl:left-[36rem] -z-10"
+      />
+      <Image
+        src="/ornament-1.svg"
+        alt="ornament"
+        width={100}
+        height={100}
+        className="absolute bottom-96 right-0 lg:bottom-32 lg:right-32 2xl:right-[36rem] -z-10"
+      />
     </section>
   );
 };

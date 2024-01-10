@@ -1,6 +1,7 @@
 'use client';
+import { IBanner } from '@/types';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 const banners = [
   {
@@ -20,8 +21,11 @@ const banners = [
     alt: 'Banner',
   },
 ];
+interface Props {
+  data: IBanner[];
+}
 
-const BannerSection = () => {
+const BannerSection = ({ data }: Props) => {
   const scrollBannerRef = useRef<HTMLDivElement>(null);
   const handleScrollBanner = (arrow: 'left' | 'right') => {
     if (scrollBannerRef.current) {
@@ -61,7 +65,7 @@ const BannerSection = () => {
         ref={scrollBannerRef}
         className="flex overflow-hidden overflow-x-scroll no-scrollbar w-[60rem] 2xl:w-[80rem] aspect-[11/4] snap-x snap-mandatory"
       >
-        {banners.map(({ image, alt }, index) => (
+        {data.map(({ image, alt }, index) => (
           <div
             key={index}
             className="snap-center flex-none relative lg:w-[60rem] 2xl:w-[80rem] aspect-[11/4] rounded-xl overflow-hidden"
@@ -90,11 +94,11 @@ const BannerSection = () => {
           />
         </svg>
       </div>
-      <div className='absolute w-48 md:w-[30rem] aspect-[5/4] top-10 -left-32 md:-left-64 -z-30 opacity-20'>
-        <Image src="/squiggles-2.svg" alt='squiggles' fill />
+      <div className="absolute w-48 md:w-[30rem] aspect-[5/4] top-10 -left-32 md:-left-64 -z-30 opacity-20">
+        <Image src="/squiggles-2.svg" alt="squiggles" fill />
       </div>
-      <div className='absolute w-48 md:w-[30rem] aspect-[5/4] top-10 -right-32 md:-right-64 -z-30 opacity-20'>
-        <Image src="/squiggles-2.svg" alt='squiggles' fill />
+      <div className="absolute w-48 md:w-[30rem] aspect-[5/4] top-10 -right-32 md:-right-64 -z-30 opacity-20">
+        <Image src="/squiggles-2.svg" alt="squiggles" fill />
       </div>
     </section>
   );

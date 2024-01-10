@@ -104,12 +104,12 @@ const AlumniProgram = () => {
                 <div>
                   <div className="flex gap-x-1 items-center">
                     <p
-                      className={`${gilroy.className} font-extrabold text-rumah-peran-red text-xl`}
+                      className={`${gilroy.className} font-extrabold text-rumah-peran-red text-lg md:text-xl`}
                     >
                       {price}
                     </p>
                     <p className={`${inter.className} text-xs text-[#4D4D4D]`}>
-                      {price}
+                      {priceInfo}
                     </p>
                   </div>
                   <Button size="full">Hubungi Kami</Button>

@@ -2,56 +2,24 @@
 import { gilroy, inter } from '@/lib/fonts';
 import Button from './Button';
 import ProgramCard from './ProgramCard';
-import { useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { readJson } from '@/lib';
 
-const programs = [
-  {
-    id: 1,
-    info: 'Usia Min. 13 Tahun',
-    title: 'Kelas Akting & Pengembangan Diri (Batch 1)',
-    date: 'Sabtu & Minggu, 13:30 - 21:00 WIB',
-    price: 'Rp3.500.000',
-    totalSessions: 14,
-    image: '/dummy-image.jpeg',
-  },
-  {
-    id: 2,
-    info: 'Usia Min. 13 Tahun',
-    title: 'Kelas Akting & Pengembangan Diri (Batch 1)',
-    date: 'Sabtu & Minggu, 13:30 - 21:00 WIB',
-    price: 'Rp3.500.000',
-    totalSessions: 14,
-    image: '/dummy-image.jpeg',
-  },
-  {
-    id: 3,
-    info: 'Usia Min. 13 Tahun',
-    title: 'Kelas Akting & Pengembangan Diri (Batch 1)',
-    date: 'Sabtu & Minggu, 13:30 - 21:00 WIB',
-    price: 'Rp3.500.000',
-    totalSessions: 14,
-    image: '/dummy-image.jpeg',
-  },
-  {
-    id: 4,
-    info: 'Usia Min. 13 Tahun',
-    title: 'Kelas Akting & Pengembangan Diri (Batch 1)',
-    date: 'Sabtu & Minggu, 13:30 - 21:00 WIB',
-    price: 'Rp3.500.000',
-    totalSessions: 14,
-    image: '/dummy-image.jpeg',
-  },
-  {
-    id: 5,
-    info: 'Usia Min. 13 Tahun',
-    title: 'Kelas Akting & Pengembangan Diri (Batch 1)',
-    date: 'Sabtu & Minggu, 13:30 - 21:00 WIB',
-    price: 'Rp3.500.000',
-    totalSessions: 14,
-    image: '/dummy-image.jpeg',
-  },
-];
-const FavoriteProgramSection = () => {
+export interface IProgram {
+  id: number;
+  info: string;
+  title: string;
+  date: string;
+  price: string;
+  totalSessions: number;
+  image: string;
+}
+
+interface Props {
+  data: IProgram[];
+}
+
+const FavoriteProgramSection = ({ data }: Props) => {
   const scrollProgramsRef = useRef<HTMLDivElement>(null);
   const handleScrollPrograms = (arrow: 'left' | 'right') => {
     if (scrollProgramsRef.current) {
@@ -64,6 +32,7 @@ const FavoriteProgramSection = () => {
       });
     }
   };
+
   return (
     <section className="py-16 mb-16 md:px-8 xl:px-32 2xl:px-96 flex items-start md:items-center flex-col md:flex-row gap-x-20 max-sm:gap-y-10 overflow-hidden">
       <div className="w-full md:w-1/3 lg:w-2/5 max-sm:px-8">
@@ -83,12 +52,12 @@ const FavoriteProgramSection = () => {
           className="flex flex-nowrap items-center gap-x-4 overflow-hidden overflow-x-scroll no-scrollbar snap-x md:pr-28 xl:pr-0"
         >
           <div className="w-20 md:hidden" />
-          {programs.map((program) => (
+          {data.map((program) => (
             <div
               key={program.id}
               className="flex-1 pb-4 snap-center md:snap-start"
             >
-              <ProgramCard data={program} type='favorite'/>
+              <ProgramCard data={program} type="favorite" />
             </div>
           ))}
           <div className="w-20" />

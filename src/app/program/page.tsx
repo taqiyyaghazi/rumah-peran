@@ -3,14 +3,17 @@ import Button, { ColorType } from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
 import ProgramHeroSection from '@/components/ProgramHeroSection';
 import ProgramSection from '@/components/ProgramSection/ProgramSection';
+import { readJson } from '@/lib';
 import { gilroy } from '@/lib/fonts';
+import { IBanner } from '@/types';
 import Image from 'next/image';
 
-export default function Program() {
+export default async function Program() {
+  const bannersData = (await readJson('/src/data/banners.json')) as IBanner[];
   return (
     <main>
       <ProgramHeroSection />
-      <BannerSection />
+      <BannerSection data={bannersData} />
       <ProgramSection />
       <CtaBox>
         <p

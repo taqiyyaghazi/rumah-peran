@@ -1,44 +1,12 @@
+import { readJson } from '@/lib';
 import { gilroy, inter } from '@/lib/fonts';
+import { IWhyUsData } from '@/types';
 import Image from 'next/image';
 
-const WhyUsSection = () => {
-  const content = [
-    {
-      title: 'Pendidikan Holistic',
-      desc: 'bukan hanya skill, tapi juga pengembangan diri, menjadi manusia',
-      img: '/holistic-icon.svg',
-    },
-    {
-      title: 'Networking',
-      desc: 'Kamu akan bertemu orang - orang yang tepat untuk terjun ke seni & entertainment',
-      img: '/networking-icon.svg',
-    },
-    {
-      title: 'Laporan Hasil Belajar',
-      desc: 'Kamu dapat melihat hasil belajarmu melalui report card, video hasil shooting, video live performance, dan apresiasi',
-      img: '/report-icon.svg',
-    },
-    {
-      title: 'Kegiatan Alumni',
-      desc: 'Para alumni juga banyak mengadakan kegiatan bermanfaat',
-      img: '/alumni-icon.svg',
-    },
-    {
-      title: 'Pengajar Profesional',
-      desc: 'Para pengajar di sini sudah sangat berpengalaman dan profesional di bidangnya',
-      img: '/instructor-icon.svg',
-    },
-    {
-      title: 'Pendidikan Praktikal',
-      desc: 'Sistem pengajaran mengedepankan praktik sehingga menjadikan peserta didik “siap pakai”',
-      img: '/practical-icon.svg',
-    },
-    {
-      title: 'Menjadi Rumah',
-      desc: 'Kami membuat sekolah ini menjadi tempat berkembang yang nyaman, aman, dan kekeluargaan',
-      img: '/home-icon.svg',
-    },
-  ];
+interface Props {
+  data: IWhyUsData[];
+}
+const WhyUsSection = async ({ data }: Props) => {
   return (
     <section className="bg-soft-cream py-16 px-8 xl:px-32 2xl:px-96 rounded-[4rem] md:rounded-[8rem] relative overflow-hidden">
       <h2
@@ -47,7 +15,7 @@ const WhyUsSection = () => {
         Mengapa Pilih Kami?
       </h2>
       <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-8">
-        {content.map(({ title, desc, img }) => (
+        {data.map(({ title, desc, img }) => (
           <div
             key={title}
             className="flex items-center justify-center gap-4 w-fit max-w-lg"
@@ -63,7 +31,11 @@ const WhyUsSection = () => {
               >
                 {title}
               </h3>
-              <p className={`${inter.className} text-sm md:text-base text-[#4D4D4D]`}>{desc}</p>
+              <p
+                className={`${inter.className} text-sm md:text-base text-[#4D4D4D]`}
+              >
+                {desc}
+              </p>
             </div>
           </div>
         ))}

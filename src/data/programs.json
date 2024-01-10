@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "info": "Usia Min. 13 Tahun",
+    "title": "Kelas Akting & Pengembangan Diri (Batch 1)",
+    "date": "Sabtu & Minggu, 13:30 - 21:00 WIB",
+    "price": "Rp3.500.000",
+    "totalSessions": 14,
+    "image": "/dummy-image.jpeg"
+  },
+  {
+    "id": 2,
+    "info": "Usia Min. 13 Tahun",
+    "title": "Kelas Akting & Pengembangan Diri (Batch 1)",
+    "date": "Sabtu & Minggu, 13:30 - 21:00 WIB",
+    "price": "Rp3.500.000",
+    "totalSessions": 14,
+    "image": "/dummy-image.jpeg"
+  },
+  {
+    "id": 3,
+    "info": "Usia Min. 13 Tahun",
+    "title": "Kelas Akting & Pengembangan Diri (Batch 1)",
+    "date": "Sabtu & Minggu, 13:30 - 21:00 WIB",
+    "price": "Rp3.500.000",
+    "totalSessions": 14,
+    "image": "/dummy-image.jpeg"
+  },
+  {
+    "id": 4,
+    "info": "Usia Min. 13 Tahun",
+    "title": "Kelas Akting & Pengembangan Diri (Batch 1)",
+    "date": "Sabtu & Minggu, 13:30 - 21:00 WIB",
+    "price": "Rp3.500.000",
+    "totalSessions": 14,
+    "image": "/dummy-image.jpeg"
+  },
+  {
+    "id": 5,
+    "info": "Usia Min. 13 Tahun",
+    "title": "Kelas Akting & Pengembangan Diri (Batch 1)",
+    "date": "Sabtu & Minggu, 13:30 - 21:00 WIB",
+    "price": "Rp3.500.000",
+    "totalSessions": 14,
+    "image": "/dummy-image.jpeg"
+  }
+]

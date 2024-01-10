@@ -1,45 +1,14 @@
+import { readJson } from '@/lib';
 import { gilroy, inter } from '@/lib/fonts';
+import { IProject } from '@/types';
 import Image from 'next/image';
 
-const ProjectSection = () => {
-  const contents = [
-    {
-      id: 1,
-      title: 'Title',
-      desc: 'Description',
-      background: '/dummy-image.jpeg',
-    },
-    {
-      id: 2,
-      title: 'Title',
-      desc: 'Description',
-      background: '/dummy-image.jpeg',
-    },
-    {
-      id: 3,
-      title: 'Title',
-      desc: 'Description',
-      background: '/dummy-image.jpeg',
-    },
-    {
-      id: 4,
-      title: 'Title',
-      desc: 'Description',
-      background: '/dummy-image.jpeg',
-    },
-    {
-      id: 5,
-      title: 'Title',
-      desc: 'Description',
-      background: '/dummy-image.jpeg',
-    },
-    {
-      id: 6,
-      title: 'Title',
-      desc: 'Description',
-      background: '/dummy-image.jpeg',
-    },
-  ];
+interface Props {
+  data: IProject[];
+}
+
+const ProjectSection = async ({ data }: Props) => {
+  
   return (
     <section className="px-4 xl:px-36 py-16 mb-8">
       <h2
@@ -48,7 +17,7 @@ const ProjectSection = () => {
         Projek & Aktivitas
       </h2>
       <div className="md:grid grid-cols-4 grid-rows-2 gap-4">
-        {contents.map(({ id, title, desc, background }) => (
+        {data.map(({ id, title, desc, background }) => (
           <div
             key={id}
             className={`relative ${
@@ -64,7 +33,7 @@ const ProjectSection = () => {
             >
               <div>
                 <h3 className="font-bold text-lg md:text-2xl">{title}</h3>
-                <p className='text-sm md:text-base'>{desc}</p>
+                <p className="text-sm md:text-base">{desc}</p>
               </div>
               <div className="relative w-16 md:w-32 aspect-square -ml-4 md:-ml-6 cursor-pointer">
                 <Image src="/play-icon.svg" alt="play button" fill />

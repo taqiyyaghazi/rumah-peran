@@ -1,8 +1,13 @@
 import { gilroy, roboto } from '@/lib/fonts';
+import { IFooterData } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Footer = () => {
+interface Props {
+  data: IFooterData;
+}
+
+const Footer = ({ data }: Props) => {
   return (
     <footer>
       <div>
@@ -68,58 +73,45 @@ const Footer = () => {
       </div>
 
       <div className="bg-soft-cream px-8 xl:px-36 pb-16 pt-32">
-        <div className={`${roboto.className} flex flex-col md:flex-row items-center justify-between gap-4`}>
+        <div
+          className={`${roboto.className} flex flex-col md:flex-row items-center justify-between gap-4`}
+        >
           <div className="p-4">
             <Image src="/logo.svg" alt="logo" width={250} height={121} />
           </div>
           <div className="flex flex-col md:flex-row items-start gap-8">
-            <div className='max-w-xs'>
+            <div className="max-w-xs">
               <p className="font-medium mb-2">Lokasi</p>
-              <p className={gilroy.className}>
-                Jl. Adhyaksa VII No.1, RT.1/RW.5, Lb. Bulus, Kec. Cilandak, Kota
-                Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12440{' '}
-              </p>
+              <p className={gilroy.className}>{data.address}</p>
             </div>
             <div>
               <p className="font-medium mb-2">Pages</p>
               <div className={`${gilroy.className} flex flex-col font-normal`}>
-                <Link href="/" className="mb-1">
-                  Home
-                </Link>
-                <Link href="/program" className="mb-1">
-                  Program
-                </Link>
-                <Link href="/about" className="mb-1">
-                  Tentang Kami
-                </Link>
-                <Link href="/instructor" className="mb-1">
-                  Pengajar
-                </Link>
+                {data.pages.map(({ id, text, href }) => (
+                  <Link key={id} href={href} className="mb-1">
+                    {text}
+                  </Link>
+                ))}
               </div>
             </div>
             <div>
               <p className="font-medium mb-2">Social Media</p>
               <div className={`${gilroy.className} flex flex-col font-normal`}>
-                <Link href="/" className="mb-1">
-                  Youtube
-                </Link>
-                <Link href="/program" className="mb-1">
-                  Facebook
-                </Link>
-                <Link href="/about" className="mb-1">
-                  Instagram
-                </Link>
+                {data.socials.map(({ id, text, href }) => (
+                  <Link key={id} href={href} className="mb-1">
+                    {text}
+                  </Link>
+                ))}
               </div>
             </div>
             <div>
               <p className="font-medium mb-2">Kontak Kami</p>
               <div className={`${gilroy.className} flex flex-col font-normal`}>
-                <Link href="/" className="mb-1">
-                  company@email.com
-                </Link>
-                <Link href="/program" className="mb-1">
-                  +62 823 1234 3245
-                </Link>
+                {data.contacts.map(({ id, text, href }) => (
+                  <Link key={id} href={href} className="mb-1">
+                    {text}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

@@ -1,9 +1,15 @@
 import { gilroy, inter } from '@/lib/fonts';
+import { IAchievement, ISummary } from '@/types';
+import Image from 'next/image';
 import Link from 'next/link';
 import Button from './Button';
-import Image from 'next/image';
 
-const HeroSection = () => {
+interface Props {
+  achievements: IAchievement[];
+  summary: string;
+}
+
+const HeroSection = ({ achievements, summary }: Props) => {
   return (
     <section>
       <div className="bg-white relative px-4 xl:px-36 pt-16 flex flex-col items-center justify-center">
@@ -12,7 +18,9 @@ const HeroSection = () => {
         >
           ART & ENTERTAINING SCHOOL
         </h2>
-        <div className={`${gilroy.className} font-extrabold text-[1.7rem] md:text-6xl mb-12 md:mb-16`}>
+        <div
+          className={`${gilroy.className} font-extrabold text-[1.7rem] md:text-6xl mb-12 md:mb-16`}
+        >
           <p className="mb-2">
             <span className="text-[#1E1E1E] text-center">
               Belajar, Berkembang, dan
@@ -51,33 +59,20 @@ const HeroSection = () => {
       </div>
       <div className="px-4 md:px-8 xl:px-36 py-16 flex max-lg:flex-col 2xl:max-w-screen-xl mx-auto items-center justify-center gap-4 md:gap-16">
         <div className="flex items-center gap-2 md:gap-4">
-          <div
-            className={`${gilroy.className} text-center flex flex-col items-center justify-center bg-[url('/circle.svg')] bg-no-repeat bg-contain w-24 h-24 md:w-40 md:h-40`}
-          >
-            <p className="font-extrabold text-rumah-peran-red text-xl md:text-5xl">200+</p>
-            <p className='text-xs md:text-base'>Alumni</p>
-          </div>
-          <div
-            className={`${gilroy.className} text-center flex flex-col items-center justify-center bg-[url('/circle.svg')] bg-no-repeat bg-contain w-24 h-24 md:w-40 md:h-40`}
-          >
-            <p className="font-extrabold text-soft-black text-xl md:text-5xl">95%</p>
-            <p className='text-xs md:text-base'>
-              Jadi lebih <br /> percaya diri
-            </p>
-          </div>
-          <div
-            className={`${gilroy.className} text-center flex flex-col items-center justify-center bg-[url('/circle.svg')] bg-no-repeat bg-contain w-24 h-24 md:w-40 md:h-40`}
-          >
-            <p className="font-extrabold text-rumah-peran-red text-xl md:text-5xl">85%</p>
-            <p className='text-xs md:text-base'>Skill meningkat</p>
-          </div>
+          {achievements.map(({ value, desc }) => (
+            <div
+              key={desc}
+              className={`${gilroy.className} text-center flex flex-col items-center justify-center bg-[url('/circle.svg')] bg-no-repeat bg-contain w-24 h-24 md:w-40 md:h-40`}
+            >
+              <p className="font-extrabold text-rumah-peran-red text-xl md:text-5xl">
+                {value}
+              </p>
+              <p className="text-xs md:text-base">{desc}</p>
+            </div>
+          ))}
         </div>
         <div>
-          <p className={`${inter.className} text-base md:text-xl`}>
-            Rumah Peran adalah lembaga pendidikan alternatif yang holistik
-            berfokus pada pengembangan skill dan karakter setiap individu
-            terutama dalam bidang Art & Entertainment.
-          </p>
+          <p className={`${inter.className} text-base md:text-xl`}>{summary}</p>
         </div>
       </div>
     </section>
