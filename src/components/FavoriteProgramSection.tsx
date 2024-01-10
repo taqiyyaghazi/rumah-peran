@@ -88,7 +88,7 @@ const FavoriteProgramSection = () => {
               key={program.id}
               className="flex-1 pb-4 snap-center md:snap-start"
             >
-              <ProgramCard data={program} />
+              <ProgramCard data={program} type='favorite'/>
             </div>
           ))}
           <div className="w-20" />

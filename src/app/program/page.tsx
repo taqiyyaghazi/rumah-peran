@@ -2,6 +2,7 @@ import BannerSection from '@/components/BannerSection';
 import Button, { ColorType } from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
 import ProgramHeroSection from '@/components/ProgramHeroSection';
+import ProgramSection from '@/components/ProgramSection/ProgramSection';
 import { gilroy } from '@/lib/fonts';
 import Image from 'next/image';
 
@@ -10,6 +11,7 @@ export default function Program() {
     <main>
       <ProgramHeroSection />
       <BannerSection />
+      <ProgramSection />
       <CtaBox>
         <p
           className={`${gilroy.className} font-extrabold text-xl md:text-3xl text-center text-soft-cream mb-4`}
