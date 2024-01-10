@@ -36,7 +36,7 @@ const ProgramSection = () => {
   return (
     <section className='px-4 xl:px-0 py-16'>
       <h2
-        className={`${gilroy.className} font-extrabold text-rumah-peran-red text-xl md:text-6xl text-center mb-8`}
+        className={`${gilroy.className} font-extrabold text-rumah-peran-red text-xl md:text-3xl xl:text-6xl text-center mb-8`}
       >
         Temukan Program yang <br /> Mencerminkan Dirimu Hari Ini!
       </h2>

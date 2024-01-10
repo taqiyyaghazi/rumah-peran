@@ -51,9 +51,9 @@ const BannerSection = () => {
           <path
             d="M15.25 25.5L6.25 16.5L15.25 7.5M7.5 16.5H25.75"
             stroke="#952F1F"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </div>
@@ -84,9 +84,9 @@ const BannerSection = () => {
           <path
             d="M16.75 7.5L25.75 16.5L16.75 25.5M24.5 16.5H6.25"
             stroke="#952F1F"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </div>
