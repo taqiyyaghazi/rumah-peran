@@ -1,8 +1,6 @@
 import Button, { ColorType } from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
-import FavoriteProgramSection, {
-  IProgram,
-} from '@/components/FavoriteProgramSection';
+import FavoriteProgramSection from '@/components/FavoriteProgramSection';
 import HeroSection from '@/components/HeroSection';
 import ProjectSection from '@/components/ProjectSection';
 import TestimoniSection from '@/components/TestimoniSection';
@@ -13,6 +11,7 @@ import { gilroy } from '@/lib/fonts';
 import {
   IAchievement,
   IPartners,
+  IProgram,
   IProject,
   ISummary,
   ITestimonial,

@@ -1,19 +1,9 @@
 'use client';
 import { gilroy, inter } from '@/lib/fonts';
+import { useRef } from 'react';
 import Button from './Button';
 import ProgramCard from './ProgramCard';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { readJson } from '@/lib';
-
-export interface IProgram {
-  id: number;
-  info: string;
-  title: string;
-  date: string;
-  price: string;
-  totalSessions: number;
-  image: string;
-}
+import { IProgram } from '@/types';
 
 interface Props {
   data: IProgram[];

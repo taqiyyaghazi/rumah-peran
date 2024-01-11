@@ -7,34 +7,17 @@ import RegularProgram from './RegularProgram';
 import CollaborationProgram from './CollaborationProgram';
 import AlumniProgram from './AlumniProgram';
 import ActingClassTour from './ActingClassTour';
+import { IProgram, ITab } from '@/types';
 
-const tabs = [
-  {
-    text: 'Regular Program',
-    value: 'regular-program',
-    image: '/holistic-icon.svg',
-  },
-  {
-    text: 'Collaboration Program',
-    value: 'collaboration-program',
-    image: '/holistic-icon.svg',
-  },
-  {
-    text: 'Alumni Program',
-    value: 'alumni-program',
-    image: '/holistic-icon.svg',
-  },
-  {
-    text: 'Acting Class Tour',
-    value: 'acting-class-tour',
-    image: '/holistic-icon.svg',
-  },
-];
+interface Props {
+  tabs: ITab[];
+  regularProgram: IProgram[]
+}
 
-const ProgramSection = () => {
+const ProgramSection = ({ tabs, regularProgram }: Props) => {
   const [currentTab, setCurrentTab] = useState(tabs[0].value);
   return (
-    <section className='px-4 xl:px-0 py-16'>
+    <section className="px-4 xl:px-0 py-16">
       <h2
         className={`${gilroy.className} font-extrabold text-rumah-peran-red text-xl md:text-3xl xl:text-6xl text-center mb-8`}
       >
@@ -69,11 +52,15 @@ const ProgramSection = () => {
                   fill
                 />
               </div>
-              <p className={`${gilroy.className} font-extrabold max-sm:text-[0.5rem]`}>{text}</p>
+              <p
+                className={`${gilroy.className} font-extrabold max-sm:text-[0.5rem]`}
+              >
+                {text}
+              </p>
             </button>
           ))}
         </div>
-        {currentTab === 'regular-program' && <RegularProgram />}
+        {currentTab === 'regular-program' && <RegularProgram data={regularProgram} />}
         {currentTab === 'collaboration-program' && <CollaborationProgram />}
         {currentTab === 'alumni-program' && <AlumniProgram />}
         {currentTab === 'acting-class-tour' && <ActingClassTour />}

@@ -6,7 +6,8 @@
     "date": "Sabtu & Minggu, 13:30 - 21:00 WIB",
     "price": "Rp3.500.000",
     "totalSessions": 14,
-    "image": "/dummy-image.jpeg"
+    "image": "/dummy-image.jpeg",
+    "currentBatch": 27
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "date": "Sabtu & Minggu, 13:30 - 21:00 WIB",
     "price": "Rp3.500.000",
     "totalSessions": 14,
-    "image": "/dummy-image.jpeg"
+    "image": "/dummy-image.jpeg",
+    "currentBatch": 27
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "date": "Sabtu & Minggu, 13:30 - 21:00 WIB",
     "price": "Rp3.500.000",
     "totalSessions": 14,
-    "image": "/dummy-image.jpeg"
+    "image": "/dummy-image.jpeg",
+    "currentBatch": 27
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "date": "Sabtu & Minggu, 13:30 - 21:00 WIB",
     "price": "Rp3.500.000",
     "totalSessions": 14,
-    "image": "/dummy-image.jpeg"
+    "image": "/dummy-image.jpeg",
+    "currentBatch": 27
   },
   {
     "id": 5,
@@ -42,6 +46,7 @@
     "date": "Sabtu & Minggu, 13:30 - 21:00 WIB",
     "price": "Rp3.500.000",
     "totalSessions": 14,
-    "image": "/dummy-image.jpeg"
+    "image": "/dummy-image.jpeg",
+    "currentBatch": 27
   }
 ]

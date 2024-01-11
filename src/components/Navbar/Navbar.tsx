@@ -29,7 +29,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   return (
-    <div>
+    <div className='bg-white'>
       <nav className="flex items-center justify-between px-8 xl:px-36 py-4">
         <Image src="/logo.svg" alt="logo" width={142} height={71} />
         <div

@@ -47,3 +47,20 @@ export interface IBanner {
   image: string;
   alt: string;
 }
+
+export interface ITab {
+  text: string;
+  value: string;
+  image: string;
+}
+
+export interface IProgram {
+  id: number;
+  info: string;
+  title: string;
+  date: string;
+  price: string;
+  totalSessions: number;
+  image: string;
+  currentBatch: number;
+}
