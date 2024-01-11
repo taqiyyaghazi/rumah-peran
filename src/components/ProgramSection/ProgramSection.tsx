@@ -1,17 +1,16 @@
 'use client';
 import { gilroy } from '@/lib/fonts';
-import Image from 'next/image';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { useState } from 'react';
-import RegularProgram from './RegularProgram';
-import CollaborationProgram from './CollaborationProgram';
-import AlumniProgram from './AlumniProgram';
-import ActingClassTour from './ActingClassTour';
 import { IProgram, ITab } from '@/types';
+import Image from 'next/image';
+import { useState } from 'react';
+import ActingClassTour from './ActingClassTour';
+import AlumniProgram from './AlumniProgram';
+import CollaborationProgram from './CollaborationProgram';
+import RegularProgram from './RegularProgram';
 
 interface Props {
   tabs: ITab[];
-  regularProgram: IProgram[]
+  regularProgram: IProgram[];
 }
 
 const ProgramSection = ({ tabs, regularProgram }: Props) => {
@@ -60,7 +59,9 @@ const ProgramSection = ({ tabs, regularProgram }: Props) => {
             </button>
           ))}
         </div>
-        {currentTab === 'regular-program' && <RegularProgram data={regularProgram} />}
+        {currentTab === 'regular-program' && (
+          <RegularProgram data={regularProgram} />
+        )}
         {currentTab === 'collaboration-program' && <CollaborationProgram />}
         {currentTab === 'alumni-program' && <AlumniProgram />}
         {currentTab === 'acting-class-tour' && <ActingClassTour />}

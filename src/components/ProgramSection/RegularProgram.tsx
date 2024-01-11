@@ -1,13 +1,13 @@
+
 import { inter } from '@/lib/fonts';
-import ProgramCard from '../ProgramCard';
-import { readJson } from '@/lib';
 import { IProgram } from '@/types';
+import ProgramCard from '../ProgramCard';
 
 interface Props {
   data: IProgram[];
 }
 
-const RegularProgram = async ({ data }: Props) => {
+const RegularProgram = ({ data }: Props) => {
   return (
     <div>
       <p className={`${inter.className} my-8 max-sm:text-xs`}>
