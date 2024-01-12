@@ -8,7 +8,7 @@ interface Props {
     id: number;
     info: string;
     title: string;
-    date: string;
+    schedule: string;
     price: string;
     totalSessions: number;
     image: string;
@@ -17,7 +17,7 @@ interface Props {
 }
 
 const ProgramCard = ({
-  data: { id, info, title, date, price, totalSessions, image },
+  data: { id, info, title, schedule, price, totalSessions, image },
   type,
 }: Props) => {
   switch (type) {
@@ -56,7 +56,7 @@ const ProgramCard = ({
                 {totalSessions}x pertemuan
               </p>
               <p className={`${inter.className} text-xs text-[#4D4D4D]`}>
-                {date}
+                {schedule}
               </p>
             </div>
             <div>
@@ -120,7 +120,7 @@ const ProgramCard = ({
                 {totalSessions}x pertemuan
               </p>
               <p className={`${inter.className} text-xs text-[#4D4D4D]`}>
-                {date}
+                {schedule}
               </p>
             </div>
             <div>
@@ -178,7 +178,7 @@ const ProgramCard = ({
               {title}
             </h3>
             <div>
-              <p className={`${inter.className} text-sm mb-3`}>{date}</p>
+              <p className={`${inter.className} text-sm mb-3`}>{schedule}</p>
               <div className="flex items-center justify-between">
                 <div className="text-rumah-peran-red">
                   <p className={`${gilroy.className} font-extrabold text-xl`}>

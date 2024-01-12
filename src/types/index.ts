@@ -58,9 +58,36 @@ export interface IProgram {
   id: number;
   info: string;
   title: string;
+  schedule: string;
   date: string;
   price: string;
   totalSessions: number;
   image: string;
   currentBatch: number;
+  location: string;
+  kuota: string;
+  desc: string;
+  instructors: IInstructor[];
+  materials: IMaterial[];
+  schedules: ISchedule[];
+  currentScheduleId: number;
+}
+
+interface IInstructor {
+  id: number;
+  name: string;
+  title: string;
+  image: string;
+}
+
+interface IMaterial {
+  id: number;
+  text: string;
+  image: string;
+}
+
+interface ISchedule {
+  id: number;
+  batch: number;
+  schedule: string;
 }
