@@ -1,4 +1,3 @@
-import { readJson } from '@/lib';
 import { gilroy, inter } from '@/lib/fonts';
 import { IWhyUsData } from '@/types';
 import Image from 'next/image';
@@ -6,7 +5,7 @@ import Image from 'next/image';
 interface Props {
   data: IWhyUsData[];
 }
-const WhyUsSection = async ({ data }: Props) => {
+const WhyUsSection = ({ data }: Props) => {
   return (
     <section className="bg-soft-cream py-16 px-8 xl:px-32 2xl:px-96 rounded-[4rem] md:rounded-[8rem] relative overflow-hidden">
       <h2

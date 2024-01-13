@@ -1,15 +1,11 @@
 import Button, { ColorType } from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
 import InstructorAvatar from '@/components/InstructorAvatar';
-import { readJson } from '@/lib';
+import { instructors } from '@/data/instructors';
 import { gilroy, inter } from '@/lib/fonts';
-import { IInstructor } from '@/types';
 import Image from 'next/image';
 
-export default async function InstructorPage() {
-  const instructors = (await readJson(
-    '/src/data/instructors.json'
-  )) as IInstructor[];
+export default function InstructorPage() {
   return (
     <main>
       <section className="bg-[url('/program-pattern.svg')] z-10 bg-no-repeat bg-cover bg-center relative overflow-hidden mb-28">

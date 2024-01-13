@@ -1,4 +1,3 @@
-import { readJson } from '@/lib';
 import { gilroy, inter } from '@/lib/fonts';
 import { IProject } from '@/types';
 import Image from 'next/image';
@@ -7,8 +6,7 @@ interface Props {
   data: IProject[];
 }
 
-const ProjectSection = async ({ data }: Props) => {
-  
+const ProjectSection = ({ data }: Props) => {
   return (
     <section className="px-4 xl:px-36 py-16 mb-8">
       <h2

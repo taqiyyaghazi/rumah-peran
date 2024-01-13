@@ -11,7 +11,7 @@ const InstructorAvatar = ({
   data: { title, name, image, desc, instagram },
 }: Props) => {
   return (
-    <div className='flex items-center flex-col'>
+    <div className="flex items-center flex-col">
       <div className="bg-soft-cream relative outline outline-8 outline-bright-yellow rounded-full w-48 lg:w-80 aspect-square mb-4">
         <div className="absolute w-48 lg:w-80 aspect-[3/4] rounded-full overflow-hidden bottom-0 left-0 px-20">
           <Image
@@ -23,7 +23,7 @@ const InstructorAvatar = ({
         </div>
         <div className="absolute p-2 lg:p-5 w-16 lg:w-28 aspect-square rounded-full border border-[#E2E2E2] bottom-0 right-0">
           <Link
-            href={instagram}
+            href={instagram as string}
             className="bg-white w-full h-full rounded-full flex items-center justify-center cursor-pointer"
             target="_blank"
           >
@@ -33,7 +33,7 @@ const InstructorAvatar = ({
           </Link>
         </div>
       </div>
-      <div className='w-56 lg:w-96'>
+      <div className="w-56 lg:w-96">
         <p
           className={`${inter.className} text-rumah-peran-red text-center text-xl font-semibold`}
         >

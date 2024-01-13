@@ -7,7 +7,7 @@ interface Props {
   partners: IPartners[];
 }
 
-const TestimoniSection = async ({ testimonials, partners }: Props) => {
+const TestimoniSection = ({ testimonials, partners }: Props) => {
   return (
     <section className="px-4 xl:px-36 py-16 bg-[url('/circle-bg.svg')] bg-no-repeat bg-center relative">
       <div className="mb-32">

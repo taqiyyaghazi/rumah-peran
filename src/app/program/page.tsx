@@ -3,22 +3,18 @@ import Button, { ColorType } from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
 import ProgramHeroSection from '@/components/ProgramHeroSection';
 import ProgramSection from '@/components/ProgramSection/ProgramSection';
-import { readJson } from '@/lib';
+import { banners } from '@/data/banners';
+import { programs } from '@/data/programs';
+import { tabs } from '@/data/tabs';
 import { gilroy } from '@/lib/fonts';
-import { IBanner, IProgram, ITab } from '@/types';
 import Image from 'next/image';
 
-export default async function Program() {
-  const bannersData = (await readJson('/src/data/banners.json')) as IBanner[];
-  const tabsData = (await readJson('/src/data/tabs.json')) as ITab[];
-  const regularProgramData = (await readJson(
-    '/src/data/programs.json'
-  )) as IProgram[];
+export default function Program() {
   return (
     <main>
       <ProgramHeroSection />
-      <BannerSection data={bannersData} />
-      <ProgramSection tabs={tabsData} regularProgram={regularProgramData} />
+      <BannerSection data={banners} />
+      <ProgramSection tabs={tabs} regularProgram={programs} />
       <CtaBox>
         <p
           className={`${gilroy.className} font-extrabold text-xl md:text-3xl text-center text-soft-cream mb-4`}

@@ -3,24 +3,6 @@ import { IBanner } from '@/types';
 import Image from 'next/image';
 import { useRef } from 'react';
 
-const banners = [
-  {
-    image: '/banner.png',
-    alt: 'Banner',
-  },
-  {
-    image: '/banner.png',
-    alt: 'Banner',
-  },
-  {
-    image: '/banner.png',
-    alt: 'Banner',
-  },
-  {
-    image: '/banner.png',
-    alt: 'Banner',
-  },
-];
 interface Props {
   data: IBanner[];
 }

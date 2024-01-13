@@ -1,18 +1,11 @@
 import Button, { ButtonType, ColorType } from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
-import { readJson } from '@/lib';
-import { gilroy, inter } from '@/lib/fonts';
-import { IProgram } from '@/types';
-import React from 'react';
-import Image from 'next/image';
 import ProgramCard from '@/components/ProgramCard';
+import { programs } from '@/data/programs';
+import { gilroy, inter } from '@/lib/fonts';
+import Image from 'next/image';
 
-export default async function DetailProgram({
-  params,
-}: {
-  params: { id: number };
-}) {
-  const programs = (await readJson('/src/data/programs.json')) as IProgram[];
+export default function DetailProgram({ params }: { params: { id: number } }) {
   const program = programs.find((item) => item.id === Number(params.id));
   return (
     <main>

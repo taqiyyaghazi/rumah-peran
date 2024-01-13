@@ -1,5 +1,5 @@
 import { gilroy, inter } from '@/lib/fonts';
-import { IAchievement, ISummary } from '@/types';
+import { IAchievement } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from './Button';

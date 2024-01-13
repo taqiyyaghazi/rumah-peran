@@ -23,14 +23,6 @@ export interface IProject {
   background: string;
 }
 
-export interface IVision {
-  vision: string;
-}
-
-export interface ISummary {
-  summary: string;
-}
-
 export interface IAchievement {
   value: string;
   desc: string;
@@ -78,8 +70,8 @@ export interface IInstructor {
   name: string;
   title: string;
   image: string;
-  instagram: string;
-  desc: string;
+  instagram?: string;
+  desc?: string;
 }
 
 interface IMaterial {

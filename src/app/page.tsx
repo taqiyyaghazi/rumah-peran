@@ -6,50 +6,26 @@ import ProjectSection from '@/components/ProjectSection';
 import TestimoniSection from '@/components/TestimoniSection';
 import VisionSection from '@/components/VisionSection';
 import WhyUsSection from '@/components/WhyUsSection';
-import { readJson } from '@/lib';
+import { achievements } from '@/data/achievements';
+import { partners } from '@/data/partners';
+import { programs } from '@/data/programs';
+import { projects } from '@/data/projects';
+import { summary } from '@/data/summary';
+import { testimonials } from '@/data/testimonials';
+import { vision } from '@/data/vision';
+import { whyUs } from '@/data/whyUs';
 import { gilroy } from '@/lib/fonts';
-import {
-  IAchievement,
-  IPartners,
-  IProgram,
-  IProject,
-  ISummary,
-  ITestimonial,
-  IVision,
-  IWhyUsData,
-} from '@/types';
 import Image from 'next/image';
 
-export default async function Home() {
-  const favoriteProgramsData = (await readJson(
-    '/src/data/programs.json'
-  )) as IProgram[];
-  const whyUsData = (await readJson('/src/data/whyUs.json')) as IWhyUsData[];
-  const testimonialsData = (await readJson(
-    '/src/data/testimonials.json'
-  )) as ITestimonial[];
-  const partnersData = (await readJson(
-    '/src/data/partners.json'
-  )) as IPartners[];
-  const projectsData = (await readJson(
-    '/src/data/projects.json'
-  )) as IProject[];
-  const { vision } = (await readJson('/src/data/vision.json')) as IVision;
-  const achievementsData = (await readJson(
-    '/src/data/achievements.json'
-  )) as IAchievement[];
-  const { summary } = (await readJson('/src/data/summary.json')) as ISummary;
+export default function Home() {
   return (
     <main>
-      <HeroSection achievements={achievementsData} summary={summary} />
+      <HeroSection achievements={achievements} summary={summary} />
       <VisionSection vision={vision} />
-      <WhyUsSection data={whyUsData} />
-      <FavoriteProgramSection data={favoriteProgramsData} />
-      <TestimoniSection
-        testimonials={testimonialsData}
-        partners={partnersData}
-      />
-      <ProjectSection data={projectsData} />
+      <WhyUsSection data={whyUs} />
+      <FavoriteProgramSection data={programs} />
+      <TestimoniSection testimonials={testimonials} partners={partners} />
+      <ProjectSection data={projects} />
 
       <CtaBox>
         <p
