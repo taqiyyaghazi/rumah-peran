@@ -1,9 +1,9 @@
 import { gilroy, inter } from '@/lib/fonts';
 import Image from 'next/image';
 import Link from 'next/link';
-import Button from './Button';
+import Button from '../Button';
 
-const ProgramHeroSection = () => {
+const HeroSection = () => {
   return (
     <section className="py-16 h-[60vh] md:h-[90vh] xl:h-[125vh] relative overflow-hidden">
       <div>
@@ -18,7 +18,7 @@ const ProgramHeroSection = () => {
           <p className="text-[#1E1E1E] md:mb-4">Kembangkan Potensi & Skill,</p>
           <p className="text-rumah-peran-red">Jadilah Versi Terbaikmu</p>
         </div>
-        <div className='flex items-center justify-center my-8'>
+        <div className="flex items-center justify-center my-8">
           <Link href="/program">
             <Button className="bg-rumah-peran-red text-soft-cream">
               Lihat Program
@@ -33,4 +33,4 @@ const ProgramHeroSection = () => {
   );
 };
 
-export default ProgramHeroSection;
+export default HeroSection;

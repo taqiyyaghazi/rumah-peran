@@ -1,11 +1,11 @@
 import Button from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
-import FavoriteProgramSection from '@/components/FavoriteProgramSection';
-import HeroSection from '@/components/HeroSection';
-import ProjectSection from '@/components/ProjectSection';
-import TestimoniSection from '@/components/TestimoniSection';
-import VisionSection from '@/components/VisionSection';
-import WhyUsSection from '@/components/WhyUsSection';
+import FavoriteProgramSection from '@/components/Home/FavoriteProgramSection';
+import HeroSection from '@/components/Home/HeroSection';
+import ProjectSection from '@/components/Home/ProjectSection';
+import TestimoniSection from '@/components/Home/TestimoniSection';
+import VisionSection from '@/components/Home/VisionSection';
+import WhyUsSection from '@/components/Home/WhyUsSection';
 import { achievements } from '@/data/achievements';
 import { partners } from '@/data/partners';
 import { programs } from '@/data/programs';

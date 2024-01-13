@@ -74,13 +74,13 @@ export interface IInstructor {
   desc?: string;
 }
 
-interface IMaterial {
+export interface IMaterial {
   id: number;
   text: string;
   image: string;
 }
 
-interface ISchedule {
+export interface ISchedule {
   id: number;
   batch: number;
   schedule: string;

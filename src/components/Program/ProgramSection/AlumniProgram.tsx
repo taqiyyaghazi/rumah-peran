@@ -1,6 +1,6 @@
 import { gilroy, inter } from '@/lib/fonts';
 import Image from 'next/image';
-import Button from '../Button';
+import Button from '../../Button';
 import { alumniPrograms } from '@/data/alumniPrograms';
 
 const AlumniProgram = () => {

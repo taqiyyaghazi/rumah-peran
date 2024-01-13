@@ -2,7 +2,7 @@ import { gilroy, inter } from '@/lib/fonts';
 import { IAchievement } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
-import Button from './Button';
+import Button from '../Button';
 
 interface Props {
   achievements: IAchievement[];

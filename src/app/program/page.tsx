@@ -1,8 +1,8 @@
-import BannerSection from '@/components/BannerSection';
+import BannerSection from '@/components/Program/BannerSection';
 import Button from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
-import ProgramHeroSection from '@/components/ProgramHeroSection';
-import ProgramSection from '@/components/ProgramSection/ProgramSection';
+import ProgramHeroSection from '@/components/Program/HeroSection';
+import ProgramSection from '@/components/Program/ProgramSection/ProgramSection';
 import { banners } from '@/data/banners';
 import { programs } from '@/data/programs';
 import { tabs } from '@/data/tabs';

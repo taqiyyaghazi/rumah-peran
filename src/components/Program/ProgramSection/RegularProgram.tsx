@@ -1,7 +1,6 @@
-
 import { inter } from '@/lib/fonts';
 import { IProgram } from '@/types';
-import ProgramCard from '../ProgramCard';
+import ProgramCard from '../../ProgramCard';
 
 interface Props {
   data: IProgram[];

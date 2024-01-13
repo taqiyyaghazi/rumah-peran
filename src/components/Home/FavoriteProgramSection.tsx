@@ -1,8 +1,8 @@
 'use client';
 import { gilroy, inter } from '@/lib/fonts';
 import { useRef } from 'react';
-import Button from './Button';
-import ProgramCard from './ProgramCard';
+import Button from '../Button';
+import ProgramCard from '../ProgramCard';
 import { IProgram } from '@/types';
 
 interface Props {
