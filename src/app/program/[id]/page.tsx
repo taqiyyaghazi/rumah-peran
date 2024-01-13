@@ -287,7 +287,7 @@ export default async function DetailProgram({
         <div>
           <div className="md:w-96 rounded-2xl shadow-md py-6 px-8 bg-white">
             <p
-              className={`${gilroy.className} font-extrabold text-rumah-peran-red text-3xl`}
+              className={`${gilroy.className} font-extrabold text-rumah-peran-red text-xl md:text-3xl`}
             >
               {program?.price}
             </p>
@@ -335,7 +335,7 @@ export default async function DetailProgram({
                     strokeLinejoin="round"
                   />
                 </svg>
-                <p className={`${inter.className} text-soft-black`}>
+                <p className={`${inter.className} max-md:text-sm text-soft-black`}>
                   {program?.date}
                 </p>
               </div>
@@ -362,7 +362,7 @@ export default async function DetailProgram({
                     strokeLinejoin="round"
                   />
                 </svg>
-                <p className={`${inter.className} text-soft-black`}>
+                <p className={`${inter.className} max-md:text-sm text-soft-black`}>
                   {program?.schedule}
                 </p>
               </div>
@@ -386,7 +386,7 @@ export default async function DetailProgram({
                     </clipPath>
                   </defs>
                 </svg>
-                <p className={`${inter.className} text-soft-black`}>
+                <p className={`${inter.className} max-md:text-sm text-soft-black`}>
                   {program?.totalSessions}X Pertemuan
                 </p>
               </div>
