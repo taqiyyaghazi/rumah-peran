@@ -48,6 +48,7 @@ export default async function DetailProgram({
         <div className="max-md:hidden absolute -top-24 -right-72 xl:right-24 w-[38rem] aspect-[5/6]">
           <Image src="/program-image.svg" alt="program-image" fill />
         </div>
+        <div className="bg-gradient-to-r from-soft-cream to-soft-cream/40 h-[50rem] w-full absolute top-0 left-0 -z-10"></div>
         <div className="bg-gradient-to-t from-white to-transparent h-28 relative z-10"></div>
       </section>
       <section className="px-4 xl:px-36 flex max-lg:flex-col-reverse max-lg:items-center gap-12 -mt-10 z-10 relative overflow-hidden">
@@ -116,9 +117,7 @@ export default async function DetailProgram({
                     <Image src={image} alt={text} fill />
                   </div>
                   <div
-                    className={`${gilroy.className} ${
-                      id % 2 === 0 ? 'text-bright-yellow' : 'text-white'
-                    } opacity-30 font-extrabold text-[10rem] absolute -bottom-20 -right-5`}
+                    className={`${gilroy.className} text-transparent font-extrabold text-[10rem] absolute font-outline-4 -bottom-20 -right-5`}
                   >
                     {id}
                   </div>
@@ -335,7 +334,9 @@ export default async function DetailProgram({
                     strokeLinejoin="round"
                   />
                 </svg>
-                <p className={`${inter.className} max-md:text-sm text-soft-black`}>
+                <p
+                  className={`${inter.className} max-md:text-sm text-soft-black`}
+                >
                   {program?.date}
                 </p>
               </div>
@@ -362,7 +363,9 @@ export default async function DetailProgram({
                     strokeLinejoin="round"
                   />
                 </svg>
-                <p className={`${inter.className} max-md:text-sm text-soft-black`}>
+                <p
+                  className={`${inter.className} max-md:text-sm text-soft-black`}
+                >
                   {program?.schedule}
                 </p>
               </div>
@@ -386,7 +389,9 @@ export default async function DetailProgram({
                     </clipPath>
                   </defs>
                 </svg>
-                <p className={`${inter.className} max-md:text-sm text-soft-black`}>
+                <p
+                  className={`${inter.className} max-md:text-sm text-soft-black`}
+                >
                   {program?.totalSessions}X Pertemuan
                 </p>
               </div>

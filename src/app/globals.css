@@ -13,3 +13,9 @@
     scrollbar-width: none; /* Firefox */
   }
 }
+
+@layer base {
+  .font-outline-4 {
+    -webkit-text-stroke: 4px #FFF2D1;
+  }
+}

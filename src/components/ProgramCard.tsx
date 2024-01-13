@@ -188,7 +188,9 @@ const ProgramCard = ({
                     {totalSessions} Pertemuan
                   </p>
                 </div>
-                <Button>Lihat Program</Button>
+                <Link href={`/program/${id}`}>
+                  <Button>Lihat Program</Button>
+                </Link>
               </div>
             </div>
           </div>

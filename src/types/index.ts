@@ -73,11 +73,13 @@ export interface IProgram {
   currentScheduleId: number;
 }
 
-interface IInstructor {
+export interface IInstructor {
   id: number;
   name: string;
   title: string;
   image: string;
+  instagram: string;
+  desc: string;
 }
 
 interface IMaterial {
