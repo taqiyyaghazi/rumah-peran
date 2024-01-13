@@ -4,32 +4,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import Button, { ButtonType } from '../Button';
+import Button from '../Button';
 import Tagline from './Tagline';
+import { menus } from '@/data/menus';
 
-const menus = [
-  {
-    name: 'Home',
-    href: '/',
-  },
-  {
-    name: 'Program',
-    href: '/program',
-  },
-  {
-    name: 'Tentang Kami',
-    href: '/about',
-  },
-  {
-    name: 'Pengajar',
-    href: '/instructor',
-  },
-];
 const Navbar = () => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   return (
-    <div className='bg-white'>
+    <div className="bg-white">
       <nav className="flex items-center justify-between px-8 xl:px-36 py-4">
         <Image src="/logo.svg" alt="logo" width={142} height={71} />
         <div
@@ -47,7 +30,7 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <Button type={ButtonType.outlined} className="max-sm:hidden">
+        <Button type="outlined" className="max-sm:hidden">
           Kontak Kami
         </Button>
         <svg
@@ -95,7 +78,7 @@ const Navbar = () => {
                   {name}
                 </Link>
               ))}
-              <Button type={ButtonType.outlined} className='mt-4'>
+              <Button type="outlined" className="mt-4">
                 Kontak Kami
               </Button>
             </div>

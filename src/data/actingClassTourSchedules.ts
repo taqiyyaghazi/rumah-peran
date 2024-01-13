@@ -1,0 +1,42 @@
+export const actingClassTourSchedules = [
+  {
+    id: 1,
+    city: 'Manado',
+    month: 'Maret',
+    location: 'Coming Soon',
+    price: 'Coming Soon',
+    image: '/manado.jpeg',
+  },
+  {
+    id: 2,
+    city: 'Makassar',
+    month: 'Mei',
+    location: 'Coming Soon',
+    price: 'Coming Soon',
+    image: '/makassar.jpeg',
+  },
+  {
+    id: 3,
+    city: 'Bali',
+    month: 'Agustus',
+    location: 'Coming Soon',
+    price: 'Coming Soon',
+    image: '/bali.jpeg',
+  },
+  {
+    id: 4,
+    city: 'Surabaya',
+    month: 'Juni',
+    location: 'Coming Soon',
+    price: 'Coming Soon',
+    image: '/surabaya.jpeg',
+  },
+  {
+    id: 5,
+    city: 'Medan',
+    month: 'September',
+    location: 'Coming Soon',
+    price: 'Coming Soon',
+    image: '/medan.jpeg',
+  },
+];

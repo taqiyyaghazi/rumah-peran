@@ -1,4 +1,4 @@
-import Button, { ColorType } from '@/components/Button';
+import Button from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
 import InstructorAvatar from '@/components/InstructorAvatar';
 import { instructors } from '@/data/instructors';
@@ -65,7 +65,7 @@ export default function InstructorPage() {
         </p>
         <div className="flex items-end justify-center gap-4">
           <div>
-            <Button color={ColorType.secondary}>Daftar Sekarang</Button>
+            <Button color="secondary">Hubungi Kami</Button>
           </div>
         </div>
         <div className="hidden md:block relative">

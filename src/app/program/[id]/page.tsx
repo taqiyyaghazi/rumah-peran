@@ -1,4 +1,4 @@
-import Button, { ButtonType, ColorType } from '@/components/Button';
+import Button from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
 import ProgramCard from '@/components/ProgramCard';
 import { programs } from '@/data/programs';
@@ -267,9 +267,7 @@ export default function DetailProgram({ params }: { params: { id: number } }) {
                     </div>
                   </div>
                   <div className="flex items-center gap-x-4">
-                    <Button type={ButtonType.outlined}>
-                      Konsultasi Skema Cicilan
-                    </Button>
+                    <Button type="outlined">Konsultasi Skema Cicilan</Button>
                   </div>
                 </div>
               </div>
@@ -417,7 +415,7 @@ export default function DetailProgram({ params }: { params: { id: number } }) {
         </p>
         <div className="flex items-end justify-center gap-4">
           <div>
-            <Button color={ColorType.secondary}>Daftar Sekarang</Button>
+            <Button color="secondary">Daftar Sekarang</Button>
           </div>
         </div>
         <div className="hidden md:block relative">

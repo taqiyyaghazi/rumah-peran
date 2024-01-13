@@ -1,32 +1,23 @@
 import { gilroy } from '@/lib/fonts';
 import React from 'react';
 
-export enum ButtonType {
-  outlined = 'outlined',
-}
-
-export enum ColorType {
-  primary = 'primary',
-  secondary = 'secondary',
-}
-
 interface Props {
-  type?: ButtonType;
+  type?: 'outlined';
   children: React.ReactNode;
   className?: string;
-  color?: ColorType;
+  color?: 'primary' | 'secondary';
   size?: 'auto' | 'sm' | 'full';
 }
 const Button = ({
   type,
   children,
   className,
-  color = ColorType.primary,
+  color = 'primary',
   size = 'auto',
   ...rest
 }: Props & React.HTMLAttributes<HTMLElement>) => {
   switch (type) {
-    case ButtonType.outlined:
+    case 'outlined':
       return (
         <button
           className={`${
@@ -51,11 +42,8 @@ const Button = ({
           } ${size === 'full' && 'px-3 py-1.5 text-sm w-full'} ${
             size === 'sm' && 'px-3 py-1.5 text-sm'
           } rounded-full ${
-            color === ColorType.primary && 'text-soft-cream bg-rumah-peran-red'
-          } ${
-            color === ColorType.secondary &&
-            'bg-soft-cream text-rumah-peran-red'
-          }`}
+            color === 'primary' && 'text-soft-cream bg-rumah-peran-red'
+          } ${color === 'secondary' && 'bg-soft-cream text-rumah-peran-red'}`}
           {...rest}
         >
           {children}

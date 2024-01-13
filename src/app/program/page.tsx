@@ -1,5 +1,5 @@
 import BannerSection from '@/components/BannerSection';
-import Button, { ColorType } from '@/components/Button';
+import Button from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
 import ProgramHeroSection from '@/components/ProgramHeroSection';
 import ProgramSection from '@/components/ProgramSection/ProgramSection';
@@ -24,7 +24,7 @@ export default function Program() {
         </p>
         <div className="flex items-end justify-center gap-4">
           <div>
-            <Button color={ColorType.secondary}>Daftar Sekarang</Button>
+            <Button color="secondary">Daftar Sekarang</Button>
           </div>
         </div>
         <div className="hidden md:block relative">

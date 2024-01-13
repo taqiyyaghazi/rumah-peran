@@ -1,7 +1,7 @@
 import { gilroy, inter } from '@/lib/fonts';
 import Image from 'next/image';
-import Button, { ButtonType } from './Button';
 import Link from 'next/link';
+import Button from './Button';
 
 interface Props {
   data: {
@@ -72,7 +72,7 @@ const ProgramCard = ({
               <div className="flex gap-x-2 mt-2">
                 <Link href={`/program/${id}`}>
                   <Button
-                    type={ButtonType.outlined}
+                    type="outlined"
                     size="sm"
                     className="border-soft-black text-sm text-soft-black"
                   >
@@ -136,7 +136,7 @@ const ProgramCard = ({
               <div className="flex gap-x-2 mt-2">
                 <Link href={`/program/${id}`}>
                   <Button
-                    type={ButtonType.outlined}
+                    type="outlined"
                     size="sm"
                     className="border-soft-black text-sm text-soft-black"
                   >
