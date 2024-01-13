@@ -1,4 +1,4 @@
-import Button, { ColorType } from '@/components/Button';
+import Button, { ButtonType, ColorType } from '@/components/Button';
 import CtaBox from '@/components/CtaBox';
 import { readJson } from '@/lib';
 import { gilroy, inter } from '@/lib/fonts';
@@ -19,12 +19,12 @@ export default async function DetailProgram({
       <section className="bg-[url('/program-pattern.svg')] z-10 bg-no-repeat bg-cover bg-center relative overflow-hidden">
         <div className="px-4 md:px-8 xl:px-32 2xl:px-96 pt-32 pb-16">
           <h2
-            className={`${inter.className} text-rumah-peran-red font-semibold`}
+            className={`${inter.className} max-sm:text-xs text-rumah-peran-red font-semibold`}
           >
             KELAS REGULAR
           </h2>
           <h1
-            className={`${gilroy.className} text-rumah-peran-red text-5xl font-extrabold max-w-96 my-4 leading-24`}
+            className={`${gilroy.className} text-rumah-peran-red max-sm:text-2xl text-5xl font-extrabold max-w-96 my-4 leading-24`}
           >
             {program?.title}
           </h1>
@@ -37,7 +37,7 @@ export default async function DetailProgram({
               ].map((item) => (
                 <div
                   key={item}
-                  className={`${inter.className} px-4 py-2 border border-rumah-peran-red rounded-md text-rumah-peran-red bg-white`}
+                  className={`${inter.className} max-sm:text-xs px-4 py-2 border border-rumah-peran-red rounded-md text-rumah-peran-red bg-white`}
                 >
                   {item}
                 </div>
@@ -45,28 +45,28 @@ export default async function DetailProgram({
             </div>
           </div>
         </div>
-        <div className="absolute -top-24 right-24 w-[38rem] aspect-[5/6]">
+        <div className="max-md:hidden absolute -top-24 -right-72 xl:right-24 w-[38rem] aspect-[5/6]">
           <Image src="/program-image.svg" alt="program-image" fill />
         </div>
         <div className="bg-gradient-to-t from-white to-transparent h-28 relative z-10"></div>
       </section>
-      <section className="px-4 xl:px-36 flex gap-x-12 -mt-10 z-10 relative ">
-        <div>
+      <section className="px-4 xl:px-36 flex max-lg:flex-col-reverse max-lg:items-center gap-12 -mt-10 z-10 relative overflow-hidden">
+        <div className="w-full">
           <div className="mb-16">
             <p
-              className={`${gilroy.className} font-extrabold text-soft-black text-2xl mb-4`}
+              className={`${gilroy.className} font-extrabold text-soft-black text-lg sm:text-2xl mb-4`}
             >
               Tentang Kelas
             </p>
-            <p>{program?.desc}</p>
+            <p className="max-sm:text-xs">{program?.desc}</p>
           </div>
           <div className="mb-16">
             <p
-              className={`${gilroy.className} font-extrabold text-soft-black text-2xl mb-4`}
+              className={`${gilroy.className} font-extrabold text-soft-black text-lg sm:text-2xl mb-4`}
             >
               Pengajar
             </p>
-            <div className="flex gap-x-4">
+            <div className="flex max-md:flex-col gap-4">
               {program?.instructors.map(({ id, name, title, image }) => (
                 <div key={id} className="flex items-center gap-x-4 w-full">
                   <div className="relative w-16 aspect-square rounded-full overflow-hidden">
@@ -79,11 +79,13 @@ export default async function DetailProgram({
                   </div>
                   <div className="p-4 border border-[#E3E8EF] rounded-t-xl rounded-br-xl w-full">
                     <p
-                      className={`${gilroy.className} font-extrabold text-xl text-rumah-peran-red`}
+                      className={`${gilroy.className} font-extrabold sm:text-xl text-rumah-peran-red`}
                     >
                       {name}
                     </p>
-                    <p className={`${inter.className} text-[#4D4D4D]`}>
+                    <p
+                      className={`${inter.className} max-sm:text-xs text-[#4D4D4D]`}
+                    >
                       {title}
                     </p>
                   </div>
@@ -93,11 +95,11 @@ export default async function DetailProgram({
           </div>
           <div>
             <p
-              className={`${gilroy.className} font-extrabold text-soft-black text-2xl mb-4`}
+              className={`${gilroy.className} font-extrabold text-soft-black text-lg md:text-2xl mb-4`}
             >
               Materi yang Akan Kamu Pelajari
             </p>
-            <div className="grid grid-cols-3 gap-4 mb-16">
+            <div className="grid md:grid-cols-3 gap-4 mb-16">
               {program?.materials.map(({ id, text, image }) => (
                 <div
                   key={id}
@@ -106,7 +108,7 @@ export default async function DetailProgram({
                   }`}
                 >
                   <p
-                    className={`${gilroy.className} text-soft-black font-extrabold mb-2`}
+                    className={`${gilroy.className} text-soft-black max-sm:text-sm font-extrabold mb-2`}
                   >
                     {text}
                   </p>
@@ -124,13 +126,13 @@ export default async function DetailProgram({
               ))}
             </div>
           </div>
-          <div>
+          <div className="mb-16">
             <p
-              className={`${gilroy.className} font-extrabold text-soft-black text-2xl mb-4`}
+              className={`${gilroy.className} font-extrabold text-soft-black text-lg md:text-2xl mb-4`}
             >
               Jadwal Kelas
             </p>
-            <div className="">
+            <div>
               {program?.schedules.map(({ id, batch, schedule }) => (
                 <div
                   key={id}
@@ -147,14 +149,14 @@ export default async function DetailProgram({
                       Jadwal Terdekat
                     </p>
                   )}
-                  <div className="flex items-center justify-between">
-                    <div>
+                  <div className="flex max-md:flex-col items-center justify-between gap-y-4">
+                    <div className="max-md:w-full">
                       <div
                         className={`${
                           id <= program?.currentScheduleId
                             ? 'bg-rumah-peran-red text-white'
                             : 'bg-white text-rumah-peran-red'
-                        } border border-rumah-peran-red rounded-full py-2 px-4 w-96 flex items-center justify-center gap-x-2`}
+                        } border border-rumah-peran-red rounded-full py-2 px-4 md:w-96 flex items-center justify-center gap-x-2`}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +174,9 @@ export default async function DetailProgram({
                             }
                           />
                         </svg>
-                        <p className={`${inter.className} font-medium`}>
+                        <p
+                          className={`${inter.className} max-md:text-sm font-medium`}
+                        >
                           Batch {batch}
                         </p>
                       </div>
@@ -182,7 +186,7 @@ export default async function DetailProgram({
                         id <= program?.currentScheduleId
                           ? 'text-rumah-peran-red'
                           : 'text-neutral-700'
-                      } ${gilroy.className} font-bold`}
+                      } ${gilroy.className} font-bold max-md:text-sm`}
                     >
                       {schedule}
                     </p>
@@ -191,9 +195,97 @@ export default async function DetailProgram({
               ))}
             </div>
           </div>
+          <div>
+            <p
+              className={`${gilroy.className} font-extrabold text-soft-black text-lg md:text-2xl mb-4`}
+            >
+              Mekanisme Pembayaran
+            </p>
+            <div>
+              <div className="border rounded-2xl py-4 px-8 mb-4">
+                <p
+                  className={`${gilroy.className} font-bold text-soft-black mb-4`}
+                >
+                  LUNAS SAAT PENDAFTARAN
+                </p>
+                <div className="flex items-center max-md:flex-col gap-4">
+                  <div className="flex items-center gap-x-4">
+                    <div className="relative w-16 aspect-square bg-[url('/circle-cream.svg')] bg-no-repeat bg-contain">
+                      <Image src="/holistic-icon.svg" alt="icon" fill />
+                    </div>
+                    <div>
+                      <p
+                        className={`${gilroy.className} max-md:text-sm text-soft-black font-bold`}
+                      >
+                        Cash
+                      </p>
+                      <p
+                        className={`${inter.className} text-xs text-[#4D4D4D]`}
+                      >
+                        Kamu bisa bayar secara cash melalui teller bank.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-x-4">
+                    <div className="relative w-16 aspect-square bg-[url('/circle-cream.svg')] bg-no-repeat bg-contain">
+                      <Image src="/holistic-icon.svg" alt="icon" fill />
+                    </div>
+                    <div>
+                      <p
+                        className={`${gilroy.className} max-md:text-sm text-soft-black font-bold`}
+                      >
+                        Transfer Bank
+                      </p>
+                      <p
+                        className={`${inter.className} text-xs text-[#4D4D4D]`}
+                      >
+                        Lebih cepat bayar lunas melalui virtual account.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="border rounded-2xl py-4 px-8">
+                <p
+                  className={`${gilroy.className} font-bold text-soft-black mb-4`}
+                >
+                  SKEMA CICILAN
+                </p>
+                <div className="flex items-center max-md:flex-col justify-between gap-4">
+                  <div className="flex items-center gap-x-4">
+                    <div className="relative w-16 aspect-square bg-[url('/circle-cream.svg')] bg-no-repeat bg-contain">
+                      <Image src="/holistic-icon.svg" alt="icon" fill />
+                    </div>
+                    <div>
+                      <p
+                        className={`${gilroy.className} max-md:text-sm text-soft-black font-bold`}
+                      >
+                        DP 50% saat pendaftaran
+                      </p>
+                      <p
+                        className={`${inter.className} text-xs text-[#4D4D4D]`}
+                      >
+                        Cicilan 1 saat pertemuan ke 3
+                      </p>
+                      <p
+                        className={`${inter.className} text-xs text-[#4D4D4D]`}
+                      >
+                        Cicilan 2 saat pertemuan ke 5
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-x-4">
+                    <Button type={ButtonType.outlined}>
+                      Konsultasi Skema Cicilan
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div>
-          <div className="w-96 rounded-2xl shadow-md py-6 px-8 bg-white">
+          <div className="md:w-96 rounded-2xl shadow-md py-6 px-8 bg-white">
             <p
               className={`${gilroy.className} font-extrabold text-rumah-peran-red text-3xl`}
             >
