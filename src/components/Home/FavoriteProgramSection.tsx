@@ -42,9 +42,9 @@ const FavoriteProgramSection = ({ data }: Props) => {
           className="flex flex-nowrap items-center gap-x-4 overflow-hidden overflow-x-scroll no-scrollbar snap-x md:pr-28 xl:pr-0"
         >
           <div className="w-20 md:hidden" />
-          {data.map((program) => (
+          {data.map((program, id) => (
             <div
-              key={program.id}
+              key={id}
               className="flex-1 pb-4 snap-center md:snap-start"
             >
               <ProgramCard data={program} type="favorite" />
