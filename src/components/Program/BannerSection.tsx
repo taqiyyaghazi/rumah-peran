@@ -1,7 +1,7 @@
 'use client';
 import { IBanner } from '@/types';
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface Props {
   data: IBanner[];
@@ -20,6 +20,25 @@ const BannerSection = ({ data }: Props) => {
       });
     }
   };
+
+  useEffect(() => {
+    let count = 0;
+    const interval = setInterval(() => {
+      count++;
+      if (count < data.length) {
+        handleScrollBanner('right');
+      } else {
+        scrollBannerRef.current?.scrollTo({
+          left: 0,
+        });
+        count = 0;
+      }
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <section className="px-4 xl:px-36 py-16 flex items-center justify-center gap-x-4 relative overflow-hidden">
