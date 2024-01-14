@@ -104,7 +104,7 @@ export const programs: IProgram[] = [
     kuota: '*Kuota terbatas',
     totalSessions: 14,
     image: '/dummy-image.jpeg',
-    currentBatch: 27,
+    currentBatch: 28,
     location: 'Onsite',
     desc: 'Seni peran adalah seni yang sangat praktikal dalam mempelajari kehidupan. Bukan hanya untuk masuk ke industri entertainment, tetapi juga untuk mengenali dan mengembangkan diri dengan lebih baik.',
     instructors: [
@@ -153,7 +153,7 @@ export const programs: IProgram[] = [
         image: '/holistic-icon.svg',
       },
     ],
-    currentScheduleId: 1,
+    currentScheduleId: 2,
     schedules: [
       {
         id: 1,
@@ -197,7 +197,7 @@ export const programs: IProgram[] = [
     kuota: '*Kuota terbatas',
     totalSessions: 14,
     image: '/dummy-image.jpeg',
-    currentBatch: 27,
+    currentBatch: 29,
     location: 'Onsite',
     desc: 'Seni peran adalah seni yang sangat praktikal dalam mempelajari kehidupan. Bukan hanya untuk masuk ke industri entertainment, tetapi juga untuk mengenali dan mengembangkan diri dengan lebih baik.',
     instructors: [
@@ -246,7 +246,7 @@ export const programs: IProgram[] = [
         image: '/holistic-icon.svg',
       },
     ],
-    currentScheduleId: 1,
+    currentScheduleId: 3,
     schedules: [
       {
         id: 1,
@@ -290,7 +290,7 @@ export const programs: IProgram[] = [
     kuota: '*Kuota terbatas',
     totalSessions: 14,
     image: '/dummy-image.jpeg',
-    currentBatch: 27,
+    currentBatch: 30,
     location: 'Onsite',
     desc: 'Seni peran adalah seni yang sangat praktikal dalam mempelajari kehidupan. Bukan hanya untuk masuk ke industri entertainment, tetapi juga untuk mengenali dan mengembangkan diri dengan lebih baik.',
     instructors: [
@@ -339,7 +339,7 @@ export const programs: IProgram[] = [
         image: '/holistic-icon.svg',
       },
     ],
-    currentScheduleId: 1,
+    currentScheduleId: 4,
     schedules: [
       {
         id: 1,
@@ -383,7 +383,7 @@ export const programs: IProgram[] = [
     kuota: '*Kuota terbatas',
     totalSessions: 14,
     image: '/dummy-image.jpeg',
-    currentBatch: 27,
+    currentBatch: 31,
     location: 'Onsite',
     desc: 'Seni peran adalah seni yang sangat praktikal dalam mempelajari kehidupan. Bukan hanya untuk masuk ke industri entertainment, tetapi juga untuk mengenali dan mengembangkan diri dengan lebih baik.',
     instructors: [
@@ -432,7 +432,7 @@ export const programs: IProgram[] = [
         image: '/holistic-icon.svg',
       },
     ],
-    currentScheduleId: 1,
+    currentScheduleId: 5,
     schedules: [
       {
         id: 1,

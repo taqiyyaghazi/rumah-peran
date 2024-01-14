@@ -16,7 +16,7 @@ interface Props {
 const ProgramSection = ({ tabs, regularProgram }: Props) => {
   const [currentTab, setCurrentTab] = useState(tabs[0].value);
   return (
-    <section className="px-4 xl:px-0 py-16">
+    <section className="px-4 xl:px-0 py-16" id="program">
       <h2
         className={`${gilroy.className} font-extrabold text-rumah-peran-red text-xl md:text-3xl xl:text-6xl text-center mb-8`}
       >

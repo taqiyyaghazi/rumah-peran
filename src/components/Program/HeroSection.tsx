@@ -19,7 +19,7 @@ const HeroSection = () => {
           <p className="text-rumah-peran-red">Jadilah Versi Terbaikmu</p>
         </div>
         <div className="flex items-center justify-center my-8">
-          <Link href="/program">
+          <Link href="/program#program">
             <Button className="bg-rumah-peran-red text-soft-cream">
               Lihat Program
             </Button>
