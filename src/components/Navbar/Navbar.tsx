@@ -14,7 +14,9 @@ const Navbar = () => {
   return (
     <div className="bg-white">
       <nav className="flex items-center justify-between px-8 xl:px-36 py-4">
-        <Image src="/logo.svg" alt="logo" width={142} height={71} />
+        <Link href="/" className="relative w-20 md:w-36 aspect-[2/1]">
+          <Image src="/logo.svg" alt="logo" fill />
+        </Link>
         <div
           className={`${gilroy.className} hidden font-semibold md:flex items-center justify-center gap-6 xl:gap-12`}
         >
