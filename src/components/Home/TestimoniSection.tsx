@@ -17,7 +17,7 @@ const TestimoniSection = ({ testimonials, partners }: Props) => {
           Testimoni Alumni
         </h2>
         <div className="md:grid grid-rows-3 grid-cols-3 gap-4">
-          {testimonials.map(({ id, image, name, message }) => (
+          {testimonials.map(({ image, name, message }, id) => (
             <div
               key={id}
               className={`max-sm:mb-4 flex items-start gap-x-2 p-4 bg-white rounded-t-lg ${

@@ -4,12 +4,16 @@ import About from '@/components/DetailProgram/About';
 import HeroSection from '@/components/DetailProgram/HeroSection';
 import ProgramCard from '@/components/ProgramCard';
 import { programs } from '@/data/programs';
-import { gilroy, inter } from '@/lib/fonts';
+import { gilroy } from '@/lib/fonts';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 
-export default function DetailProgram({ params }: { params: { id: number } }) {
-  const program = programs.find((item) => item.id === Number(params.id));
+export default function DetailProgram({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const program = programs.find((item) => item.slug === params.slug);
   if (!program) redirect('/not-found');
   return (
     <main>
@@ -38,12 +42,8 @@ export default function DetailProgram({ params }: { params: { id: number } }) {
           Ikut Juga Kelas Lainnya!
         </h2>
         <div className="flex max-sm:flex-col gap-4">
-          {programs.slice(0, 4).map((program) => (
-            <ProgramCard
-              key={program.id}
-              type="regular-vertical"
-              data={program}
-            />
+          {programs.slice(0, 4).map((program, id) => (
+            <ProgramCard key={id} type="regular-vertical" data={program} />
           ))}
         </div>
       </section>

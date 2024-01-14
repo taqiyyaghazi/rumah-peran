@@ -5,7 +5,6 @@ export interface IWhyUsData {
 }
 
 export interface ITestimonial {
-  id: number;
   image: string;
   name: string;
   message: string;
@@ -17,7 +16,6 @@ export interface IPartners {
 }
 
 export interface IProject {
-  id: number;
   title: string;
   desc: string;
   background: string;
@@ -30,9 +28,9 @@ export interface IAchievement {
 
 export interface IFooterData {
   address: string;
-  pages: { id: number; text: string; href: string }[];
-  socials: { id: number; text: string; href: string }[];
-  contacts: { id: number; text: string; href: string }[];
+  pages: { text: string; href: string }[];
+  socials: { text: string; href: string }[];
+  contacts: { text: string; href: string }[];
 }
 
 export interface IBanner {
@@ -47,13 +45,13 @@ export interface ITab {
 }
 
 export interface IProgram {
-  id: number;
-  info: string;
+  slug: string;
+  info: string | null;
   title: string;
   schedule: string;
   date: string;
   price: string;
-  totalSessions: number;
+  totalSessions: number | null;
   image: string;
   currentBatch: number;
   location: string;
@@ -63,10 +61,10 @@ export interface IProgram {
   materials: IMaterial[];
   schedules: ISchedule[];
   currentScheduleId: number;
+  pricePer: string;
 }
 
 export interface IInstructor {
-  id: number;
   name: string;
   title: string;
   image: string;
@@ -75,13 +73,11 @@ export interface IInstructor {
 }
 
 export interface IMaterial {
-  id: number;
   text: string;
   image: string;
 }
 
 export interface ISchedule {
-  id: number;
   batch: number;
   schedule: string;
 }

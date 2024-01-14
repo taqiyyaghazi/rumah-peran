@@ -36,22 +36,22 @@ export default function InstructorPage() {
       <section className="px-4 xl:px-36 py-16 flex flex-col gap-24 mb-32">
         <div className="flex justify-center max-sm:gap-y-20">
           <div className="flex max-sm:flex-col gap-4 max-sm:gap-y-20">
-            {instructors.slice(0, 3).map((instructor) => (
-              <InstructorAvatar key={instructor.id} data={instructor} />
+            {instructors.slice(0, 3).map((instructor, id) => (
+              <InstructorAvatar key={id} data={instructor} />
             ))}
           </div>
         </div>
         <div className="flex justify-center max-sm:gap-y-20">
           <div className="flex max-sm:flex-col gap-4 max-sm:gap-y-20">
-            {instructors.slice(3, 5).map((instructor) => (
-              <InstructorAvatar key={instructor.id} data={instructor} />
+            {instructors.slice(3, 5).map((instructor, id) => (
+              <InstructorAvatar key={id} data={instructor} />
             ))}
           </div>
         </div>
         <div className="flex justify-center max-sm:gap-y-20">
           <div className="flex max-sm:flex-col gap-4 max-sm:gap-y-20">
-            {instructors.slice(5, 7).map((instructor) => (
-              <InstructorAvatar key={instructor.id} data={instructor} />
+            {instructors.slice(5, 7).map((instructor, id) => (
+              <InstructorAvatar key={id} data={instructor} />
             ))}
           </div>
         </div>

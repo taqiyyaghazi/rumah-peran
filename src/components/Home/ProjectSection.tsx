@@ -15,18 +15,18 @@ const ProjectSection = ({ data }: Props) => {
         Projek & Aktivitas
       </h2>
       <div className="md:grid grid-cols-4 grid-rows-2 gap-4">
-        {data.map(({ id, title, desc, background }) => (
+        {data.map(({ title, desc, background }, id) => (
           <div
             key={id}
             className={`relative ${
-              [1, 2].includes(id) ? 'max-sm:h-56 md:row-span-2' : 'h-56'
+              [0, 1].includes(id) ? 'max-sm:h-56 md:row-span-2' : 'h-56'
             } rounded-xl overflow-hidden max-sm:mb-4`}
           >
             <div
               className={`${
                 inter.className
               } text-white p-4 flex flex-col absolute ${
-                id === 2 ? 'top-5 md:bottom-5' : 'top-5'
+                id === 1 ? 'top-5 md:bottom-5' : 'top-5'
               } left-5`}
             >
               <div>

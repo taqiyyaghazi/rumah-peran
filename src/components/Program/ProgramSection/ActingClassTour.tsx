@@ -17,7 +17,7 @@ const ActingClassTour = () => {
           Kenapa kamu harus ikut class tour ini?
         </h3>
         <div className="flex max-sm:flex-col items-center justify-between rounded-lg shadow-md p-6 gap-4">
-          {actingClassTourWhy.map(({ id, text, image }) => (
+          {actingClassTourWhy.map(({ text, image }, id) => (
             <div key={id} className="w-full">
               <div className="w-16 mx-auto relative aspect-square bg-[url('/circle-cream.svg')] bg-no-repeat bp-center bg-contain">
                 <Image src={image} alt={text} fill />
@@ -39,7 +39,7 @@ const ActingClassTour = () => {
         </h3>
         <div className="flex max-sm:flex-col md:flex-wrap items-center gap-4">
           {actingClassTourSchedules.map(
-            ({ id, city, month, location, price, image }) => (
+            ({ city, month, location, price, image }, id) => (
               <div
                 key={id}
                 className="flex flex-col justify-end p-4 text-white w-48 aspect-[3/4] rounded-xl relative overflow-hidden"

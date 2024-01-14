@@ -2,19 +2,19 @@ import { IBanner } from '@/types';
 
 export const banners: IBanner[] = [
   {
-    image: '/banner.png',
+    image: '/banner-1.webp',
     alt: 'Banner',
   },
   {
-    image: '/banner.png',
+    image: '/banner-2.webp',
     alt: 'Banner',
   },
   {
-    image: '/banner.png',
+    image: '/banner-3.webp',
     alt: 'Banner',
   },
   {
-    image: '/banner.png',
+    image: '/banner-4.png',
     alt: 'Banner',
   },
 ];

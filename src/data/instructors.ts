@@ -2,7 +2,6 @@ import { IInstructor } from '@/types';
 
 export const instructors: IInstructor[] = [
   {
-    id: 1,
     name: 'Raymond Handaya',
     title: 'Film Director & Produser',
     desc: 'Sutradara dan Produser Film di Indonesia, hingga saat ini sudah terlibat dalam banyak produksi film televisi, series, iklan, dan lebih dari 45 produksi film layar lebar. Diantaranya adalah Teka Teki Tika (2021), Imperfect (2019), Kapal Goyang Kapten (2019) dll.',
@@ -10,7 +9,6 @@ export const instructors: IInstructor[] = [
     image: '/raymond-handaya.png',
   },
   {
-    id: 2,
     name: 'Yaya Unru',
     title: 'Aktor',
     desc: 'Merupakan aktor senior, pemain teater, sutradara, dan pelatih akting untuk project film. Beliau juga pernah mendapatkan penghargaan sebagai Pemeran Pendukung Pria terbaik di ajang FFI 2014 (Tabula Rasa) & Pemeran Pria terbaik FFI 2017 (Posesif).',
@@ -18,7 +16,6 @@ export const instructors: IInstructor[] = [
     image: '/yaya-unru.png',
   },
   {
-    id: 3,
     name: 'Ari Kusuma',
     title: 'Pengajar Akting',
     desc: 'Alumni Seni Peran Institut Kesenian Jakarta. Berkarir di Dunia panggung teater menjadi aktor, sutradara dan penulis.',
@@ -26,7 +23,6 @@ export const instructors: IInstructor[] = [
     image: '/ari-kusuma.png',
   },
   {
-    id: 4,
     name: 'Kameo Lova',
     title: 'Pengajar Akting',
     desc: 'Alumni Institut Kesenian Jakarta. Berkarya di panggung teater sebagai aktor, sutradara, pelatih akting film, dan pengajar teater.',
@@ -34,7 +30,6 @@ export const instructors: IInstructor[] = [
     image: '/kameo-lova.png',
   },
   {
-    id: 5,
     name: 'Umroh Pasaribu',
     title: 'Pengajar Akting',
     desc: 'Pengajar seni peran yang memiliki pengalaman mengajar lebih dari 6 tahun dan memiliki beberapa prestasi dalam lomba film festival baik sebagai pembina dan pemain.',
@@ -42,7 +37,6 @@ export const instructors: IInstructor[] = [
     image: '/umroh-pasaribu.png',
   },
   {
-    id: 6,
     name: 'Josevanie Looraine',
     title: 'Pengajar Sanggar Anak',
     desc: 'Alumni Rumah Peran Batch 16 yang berpengalaman mengajar ballet anak usia 4-12 tahun dan telah mendapatkan sertifikasi sebagai Penari Tari modern dari LSK TMI.',
@@ -50,7 +44,6 @@ export const instructors: IInstructor[] = [
     image: '/josevanie-looraine.png',
   },
   {
-    id: 7,
     name: 'Stephanie Fenuela',
     title: 'Pengajar Sanggar Anak',
     desc: 'Alumni Rumah Peran Batch 12 yang berpengalaman mengajar kelas anak usia 4-12 tahun. Aktif berperan di beberapa series/film sebagai pemeran pendukung sekaligus merupakan General Manager di Rumah Peran.',

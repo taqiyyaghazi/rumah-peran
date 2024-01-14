@@ -1,6 +1,5 @@
 export const alumniPrograms = [
   {
-    id: 1,
     title: 'Kelas Alumni',
     desc: 'Kelas akting gratis khusus untuk alumni yang memfasilitasi alumni untuk terus berkarya.',
     schedule: 'Hari Rabu pada minggu kedua dan keempat setiap bulan',
@@ -10,7 +9,6 @@ export const alumniPrograms = [
     image: '/dummy-image.jpeg',
   },
   {
-    id: 2,
     title: 'Movie Night and Discussion',
     desc: 'Sesi sharing santai untuk diskusi bareng mentor',
     schedule: 'Hari Rabu pada minggu ketiga setiap bulan',
@@ -20,7 +18,6 @@ export const alumniPrograms = [
     image: '/dummy-image.jpeg',
   },
   {
-    id: 3,
     title: 'Sharing Session with Actors',
     desc: 'Program dimana alumni berdiskusi dengan sosok yang berkecimpung di dunia entertainment untuk berbagi pengalaman dan menambah wawasan bagi alumni.',
     schedule: 'Juni, Oktober, Desember',
@@ -30,7 +27,6 @@ export const alumniPrograms = [
     image: '/dummy-image.jpeg',
   },
   {
-    id: 4,
     title: 'Alumni Berperan (Social Activity)',
     desc: 'Aktivitas sosial di mana alumni berbagi ilmu, materi dan perhatian dengan komunitas yang membutuhkan.',
     schedule: 'Februari, Mei, Agustus, November',

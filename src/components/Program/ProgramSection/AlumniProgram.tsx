@@ -12,7 +12,7 @@ const AlumniProgram = () => {
       </p>
       <div className="flex gap-4 max-sm:flex-col items-center">
         {alumniPrograms.map(
-          ({ id, title, desc, schedule, time, price, priceInfo, image }) => (
+          ({ title, desc, schedule, time, price, priceInfo, image }, id) => (
             <div
               key={id}
               className="w-64 min-h-[32rem] rounded-lg overflow-hidden shadow-md"

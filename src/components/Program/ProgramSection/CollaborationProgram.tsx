@@ -11,7 +11,7 @@ const CollaborationProgram = () => {
         menghadirkan program yang sesuai dengan kebutuhan perusahaan/komunitas
       </p>
       <div className="flex max-sm:flex-col gap-4">
-        {collaborationPrograms.map(({ id, title, desc, image }) => (
+        {collaborationPrograms.map(({ title, desc, image }, id) => (
           <div
             key={id}
             className="rounded-xl shadow-md md:w-96 overflow-hidden"

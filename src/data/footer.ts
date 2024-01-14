@@ -5,52 +5,55 @@ export const footer: IFooterData = {
     'Jl. Adhyaksa VII No.1, RT.1/RW.5, Lb. Bulus, Kec. Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12440',
   pages: [
     {
-      id: 1,
       text: 'Home',
       href: '/',
     },
     {
-      id: 2,
       text: 'Program',
       href: '/program',
     },
     {
-      id: 3,
       text: 'Tentang Kami',
       href: '/about',
     },
     {
-      id: 4,
       text: 'Pengajar',
       href: '/instructor',
     },
   ],
   socials: [
     {
-      id: 1,
       text: 'Youtube',
-      href: '',
+      href: 'https://www.youtube.com/@RumahPeran',
     },
     {
-      id: 2,
       text: 'Facebook',
-      href: '',
+      href: 'https://www.facebook.com/rumahperan',
     },
     {
-      id: 3,
       text: 'Instagram',
-      href: '',
+      href: 'https://www.instagram.com/rumahperanindonesia/',
+    },
+    {
+      text: 'Twitter',
+      href: 'https://twitter.com/rumahperan',
+    },
+    {
+      text: 'LinkedIn',
+      href: 'https://www.linkedin.com/company/rumah-peran/',
+    },
+    {
+      text: 'TikTok',
+      href: 'https://www.tiktok.com/@rumahperanindonesia',
     },
   ],
   contacts: [
     {
-      id: 1,
-      text: 'company@email.com',
-      href: '',
+      text: 'hello@rumahperan.com',
+      href: 'mailto:hello@rumahperan.com',
     },
     {
-      id: 2,
-      text: '+62 823 1234 3245',
+      text: '(+62) 822 1000 7679',
       href: '',
     },
   ],

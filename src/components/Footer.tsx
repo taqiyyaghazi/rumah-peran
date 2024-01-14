@@ -87,7 +87,7 @@ const Footer = ({ data }: Props) => {
             <div>
               <p className="font-medium mb-2">Pages</p>
               <div className={`${gilroy.className} flex flex-col font-normal`}>
-                {data.pages.map(({ id, text, href }) => (
+                {data.pages.map(({ text, href }, id) => (
                   <Link key={id} href={href} className="mb-1">
                     {text}
                   </Link>
@@ -97,8 +97,8 @@ const Footer = ({ data }: Props) => {
             <div>
               <p className="font-medium mb-2">Social Media</p>
               <div className={`${gilroy.className} flex flex-col font-normal`}>
-                {data.socials.map(({ id, text, href }) => (
-                  <Link key={id} href={href} className="mb-1">
+                {data.socials.map(({ text, href }, id) => (
+                  <Link key={id} href={href} target="_blank" className="mb-1">
                     {text}
                   </Link>
                 ))}
@@ -107,8 +107,8 @@ const Footer = ({ data }: Props) => {
             <div>
               <p className="font-medium mb-2">Kontak Kami</p>
               <div className={`${gilroy.className} flex flex-col font-normal`}>
-                {data.contacts.map(({ id, text, href }) => (
-                  <Link key={id} href={href} className="mb-1">
+                {data.contacts.map(({ text, href }, id) => (
+                  <Link key={id} href={href} target="_blank" className="mb-1">
                     {text}
                   </Link>
                 ))}

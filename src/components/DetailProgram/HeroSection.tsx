@@ -4,7 +4,7 @@ import Image from 'next/image';
 interface Props {
   title: string;
   currentBatch: number;
-  info: string;
+  info: string | null;
   location: string;
 }
 
@@ -24,14 +24,16 @@ const HeroSection = ({ title, currentBatch, info, location }: Props) => {
         </h1>
         <div>
           <div className="flex gap-x-4">
-            {[`Batch ${currentBatch}`, info, location].map((item) => (
-              <div
-                key={item}
-                className={`${inter.className} max-sm:text-xs px-4 py-2 border border-rumah-peran-red rounded-md text-rumah-peran-red bg-white`}
-              >
-                {item}
-              </div>
-            ))}
+            {[`Batch ${currentBatch}`, info, location]
+              .filter((item) => !!item)
+              .map((item) => (
+                <div
+                  key={item}
+                  className={`${inter.className} max-sm:text-xs px-4 py-2 border border-rumah-peran-red rounded-md text-rumah-peran-red bg-white`}
+                >
+                  {item}
+                </div>
+              ))}
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ interface Props {
   kuota: string;
   date: string;
   schedule: string;
-  totalSessions: number;
+  totalSessions: number | null;
   schedules: ISchedule[];
   currentScheduleId: number;
 }
@@ -46,7 +46,7 @@ const About = ({
             Pengajar
           </p>
           <div className="flex max-md:flex-col gap-4">
-            {instructors.map(({ id, name, title, image }) => (
+            {instructors.map(({ name, title, image }, id) => (
               <div key={id} className="flex items-center gap-x-4 w-full">
                 <div className="relative w-16 aspect-square rounded-full overflow-hidden">
                   <Image src={image} alt={name} fill className="object-cover" />
@@ -74,11 +74,11 @@ const About = ({
             Materi yang Akan Kamu Pelajari
           </p>
           <div className="grid md:grid-cols-3 gap-4 mb-16">
-            {materials.map(({ id, text, image }) => (
+            {materials.map(({ text, image }, id) => (
               <div
                 key={id}
                 className={`p-4 rounded-xl shadow-md h-64 relative overflow-hidden ${
-                  id % 2 === 0 ? 'bg-white' : 'bg-bright-yellow'
+                  (id + 1) % 2 === 0 ? 'bg-white' : 'bg-bright-yellow'
                 }`}
               >
                 <p
@@ -92,7 +92,7 @@ const About = ({
                 <div
                   className={`${gilroy.className} text-transparent font-extrabold text-[10rem] absolute font-outline-4 -bottom-20 -right-5`}
                 >
-                  {id}
+                  {id + 1}
                 </div>
               </div>
             ))}
@@ -105,7 +105,7 @@ const About = ({
             Jadwal Kelas
           </p>
           <div>
-            {schedules.map(({ id, batch, schedule }) => (
+            {schedules.map(({ batch, schedule }, id) => (
               <div
                 key={id}
                 className={`${
@@ -263,6 +263,7 @@ const About = ({
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
+                className="flex-none"
               >
                 <path
                   d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z"
@@ -306,6 +307,7 @@ const About = ({
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
+                className="flex-none"
               >
                 <path
                   d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
@@ -328,32 +330,35 @@ const About = ({
                 {schedule}
               </p>
             </div>
-            <div className="flex items-center gap-x-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <g clipPath="url(#clip0_354_5282)">
-                  <path
-                    d="M4 4H20V16H5.17L4 17.17V4ZM4 2C2.9 2 2.01 2.9 2.01 4L2 22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2H4ZM6 12H14V14H6V12ZM6 9H18V11H6V9ZM6 6H18V8H6V6Z"
-                    fill="#952F1F"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_354_5282">
-                    <rect width="24" height="24" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              <p
-                className={`${inter.className} max-md:text-sm text-soft-black`}
-              >
-                {totalSessions}X Pertemuan
-              </p>
-            </div>
+            {totalSessions && (
+              <div className="flex items-center gap-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <g clipPath="url(#clip0_354_5282)">
+                    <path
+                      d="M4 4H20V16H5.17L4 17.17V4ZM4 2C2.9 2 2.01 2.9 2.01 4L2 22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2H4ZM6 12H14V14H6V12ZM6 9H18V11H6V9ZM6 6H18V8H6V6Z"
+                      fill="#952F1F"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_354_5282">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <p
+                  className={`${inter.className} max-md:text-sm text-soft-black`}
+                >
+                  {totalSessions}X Pertemuan
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
