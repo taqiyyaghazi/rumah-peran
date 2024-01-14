@@ -14,8 +14,8 @@ const RegularProgram = ({ data }: Props) => {
         potensi dan memfasilitasi keunikan setiap individu
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {data.map((program) => (
-          <ProgramCard key={program.id} data={program} type="regular" />
+        {data.map((program, id) => (
+          <ProgramCard key={id} data={program} type="regular" />
         ))}
       </div>
     </div>
