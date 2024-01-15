@@ -5,7 +5,7 @@ import Button from '../Button';
 
 const HeroSection = () => {
   return (
-    <section className="py-16 h-[60vh] md:h-[90vh] xl:h-[125vh] relative overflow-hidden">
+    <section className="py-16 h-96 sm:h-[30rem] md:h-[35rem] lg:h-[45rem] xl:h-[60rem] 2xl:h-[90rem] relative overflow-hidden">
       <div>
         <h2
           className={`${inter.className} text-base md:text-xl xl:text-2xl text-center font-semibold text-rumah-peran-red mb-4`}
@@ -26,7 +26,7 @@ const HeroSection = () => {
           </Link>
         </div>
       </div>
-      <div className="w-[115vw] aspect-video absolute bottom-0 -left-6 md:-left-16 xl:-left-28 -z-20">
+      <div className="w-[115vw] aspect-video absolute bottom-0 -left-6 md:-left-16 lg:-left-20 xl:-left-28 2xl:-left-48 -z-20">
         <Image src="program-hero.svg" alt="program background" fill />
       </div>
     </section>

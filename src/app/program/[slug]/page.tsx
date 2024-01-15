@@ -41,7 +41,7 @@ export default function DetailProgram({
         >
           Ikut Juga Kelas Lainnya!
         </h2>
-        <div className="flex max-sm:flex-col gap-4">
+        <div className="flex max-sm:flex-col gap-4 flex-wrap items-center md:items-start justify-center">
           {programs.slice(0, 4).map((program, id) => (
             <ProgramCard key={id} type="regular-vertical" data={program} />
           ))}

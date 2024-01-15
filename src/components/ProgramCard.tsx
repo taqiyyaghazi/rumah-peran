@@ -96,7 +96,7 @@ const ProgramCard = ({
       );
     case 'regular-vertical':
       return (
-        <div className="rounded-xl shadow-md flex flex-col overflow-hidden">
+        <div className="flex-none rounded-xl h-[30rem] max-w-64 shadow-md flex flex-col overflow-hidden">
           <div className="relative w-full aspect-square">
             <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
             <Image src={image} alt={title} fill className="object-cover" />
@@ -118,7 +118,7 @@ const ProgramCard = ({
               <p className={`${inter.className} text-xs text-white`}>{info}</p>
             </div>
           </div>
-          <div className="p-4">
+          <div className="p-4 h-full flex flex-col justify-between">
             <div className="mb-8">
               <h3
                 className={`${gilroy.className} font-extrabold md:text-lg text-soft-black`}
