@@ -5,7 +5,7 @@ import Button from '../Button';
 
 const HeroSection = () => {
   return (
-    <section className="py-16 h-96 sm:h-[30rem] md:h-[35rem] lg:h-[45rem] xl:h-[60rem] 2xl:h-[90rem] relative overflow-hidden">
+    <section className="py-16 h-96 sm:h-[34rem] md:h-[35rem] lg:h-[45rem] xl:h-[60rem] 2xl:h-[90rem] relative overflow-hidden">
       <div>
         <h2
           className={`${inter.className} text-base md:text-xl xl:text-2xl text-center font-semibold text-rumah-peran-red mb-4`}
