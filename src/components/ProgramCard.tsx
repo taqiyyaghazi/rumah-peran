@@ -8,17 +8,17 @@ interface Props {
     slug: string;
     info: string | null;
     title: string;
-    schedule: string;
-    price: string;
-    pricePer: string;
+    price: string | null;
+    pricePer: string | null;
     totalSessions: number | null;
     image: string;
+    time?: string;
   };
   type: 'favorite' | 'regular' | 'regular-vertical';
 }
 
 const ProgramCard = ({
-  data: { slug, info, title, schedule, price, totalSessions, image, pricePer },
+  data: { slug, info, title, price, totalSessions, image, pricePer, time },
   type,
 }: Props) => {
   switch (type) {
@@ -64,11 +64,13 @@ const ProgramCard = ({
                   {totalSessions}x pertemuan
                 </p>
               )}
-              <p className={`${inter.className} text-xs text-[#4D4D4D]`}>
-                {schedule}
-              </p>
+              {!!time && (
+                <p className={`${inter.className} text-xs text-[#4D4D4D]`}>
+                  {time}
+                </p>
+              )}
             </div>
-            <div>
+            {!!price && <div>
               <p className={`${inter.className} text-xs text-[#4D4D4D]`}>
                 Harga mulai
               </p>
@@ -90,7 +92,7 @@ const ProgramCard = ({
                 </Link>
                 <Button size="sm">Daftar Sekarang</Button>
               </div>
-            </div>
+            </div>}
           </div>
         </div>
       );
@@ -125,12 +127,18 @@ const ProgramCard = ({
               >
                 {title}
               </h3>
-              <p className={`${inter.className} text-sm text-rumah-peran-red`}>
-                {totalSessions}x pertemuan
-              </p>
-              <p className={`${inter.className} text-xs text-[#4D4D4D]`}>
-                {schedule}
-              </p>
+              {!!totalSessions && (
+                <p
+                  className={`${inter.className} text-sm text-rumah-peran-red`}
+                >
+                  {totalSessions}x pertemuan
+                </p>
+              )}
+              {!!time && (
+                <p className={`${inter.className} text-xs text-[#4D4D4D]`}>
+                  {time}
+                </p>
+              )}
             </div>
             <div>
               <p className={`${inter.className} text-xs text-[#4D4D4D]`}>
@@ -140,7 +148,7 @@ const ProgramCard = ({
                 className={`${gilroy.className} font-extrabold md:text-xl text-rumah-peran-red`}
               >
                 {price}{' '}
-                <span className="text-xs font-light -ml-1">/Pertemuan</span>
+                <span className="text-xs font-light -ml-1">/{pricePer}</span>
               </p>
               <div className="flex gap-x-2 mt-2">
                 <Link href={`/program/${slug}`}>
@@ -191,7 +199,9 @@ const ProgramCard = ({
               {title}
             </h3>
             <div>
-              <p className={`${inter.className} text-sm mb-3`}>{schedule}</p>
+              {!!time && (
+                <p className={`${inter.className} text-sm mb-3`}>{time}</p>
+              )}
               <div className="flex items-center justify-between">
                 <div className="text-rumah-peran-red">
                   <p className={`${gilroy.className} font-extrabold text-xl`}>
@@ -199,7 +209,7 @@ const ProgramCard = ({
                   </p>
                   {totalSessions && (
                     <p className={`${inter.className} text-sm`}>
-                      {totalSessions} Pertemuan
+                      {totalSessions}x Pertemuan
                     </p>
                   )}
                 </div>

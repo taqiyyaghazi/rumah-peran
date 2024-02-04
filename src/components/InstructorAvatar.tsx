@@ -21,33 +21,37 @@ const InstructorAvatar = ({
             className="object-contain object-bottom"
           />
         </div>
-        <div className="absolute p-2 lg:p-5 w-16 lg:w-28 aspect-square rounded-full border border-[#E2E2E2] bottom-0 right-0">
-          <Link
-            href={instagram as string}
-            className="bg-white w-full h-full rounded-full flex items-center justify-center cursor-pointer"
-            target="_blank"
+        {!!instagram && (
+          <div className="absolute p-2 lg:p-5 w-16 lg:w-28 aspect-square rounded-full border border-[#E2E2E2] bottom-0 right-0">
+            <Link
+              href={instagram as string}
+              className="bg-white w-full h-full rounded-full flex items-center justify-center cursor-pointer"
+              target="_blank"
+            >
+              <div className="relative w-5 lg:w-10 aspect-square">
+                <Image src="/instagram.svg" alt="instagram icon" fill />
+              </div>
+            </Link>
+          </div>
+        )}
+      </div>
+      {!!desc && (
+        <div className="w-56 lg:w-96">
+          <p
+            className={`${inter.className} text-rumah-peran-red text-center text-xl font-semibold`}
           >
-            <div className="relative w-5 lg:w-10 aspect-square">
-              <Image src="/instagram.svg" alt="instagram icon" fill />
-            </div>
-          </Link>
+            {title}
+          </p>
+          <p
+            className={`${gilroy.className} text-soft-black font-extrabold text-3xl text-center`}
+          >
+            {name}
+          </p>
+          <p className={`${inter.className} text-[#616161] text-center`}>
+            {desc}
+          </p>
         </div>
-      </div>
-      <div className="w-56 lg:w-96">
-        <p
-          className={`${inter.className} text-rumah-peran-red text-center text-xl font-semibold`}
-        >
-          {title}
-        </p>
-        <p
-          className={`${gilroy.className} text-soft-black font-extrabold text-3xl text-center`}
-        >
-          {name}
-        </p>
-        <p className={`${inter.className} text-[#616161] text-center`}>
-          {desc}
-        </p>
-      </div>
+      )}
     </div>
   );
 };

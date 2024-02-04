@@ -5,6 +5,7 @@ import HeroSection from '@/components/DetailProgram/HeroSection';
 import ProgramCard from '@/components/ProgramCard';
 import { programs } from '@/data/programs';
 import { gilroy } from '@/lib/fonts';
+import { isBefore } from 'date-fns';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 
@@ -15,25 +16,28 @@ export default function DetailProgram({
 }) {
   const program = programs.find((item) => item.slug === params.slug);
   if (!program) redirect('/not-found');
+  const nearestSchedule = program.schedules.find((schedule) =>
+    isBefore(new Date(), schedule.startDate)
+  );
   return (
     <main>
       <HeroSection
         title={program.title}
-        currentBatch={program.currentBatch}
+        currentBatch={nearestSchedule?.batch}
         info={program.info}
         location={program.location}
+        image={program.image}
       />
       <About
         desc={program.desc}
         instructors={program.instructors}
         materials={program.materials}
         price={program.price}
-        kuota={program.kuota}
-        date={program.date}
-        schedule={program.schedule}
+        time={program.time}
         totalSessions={program.totalSessions}
         schedules={program.schedules}
-        currentScheduleId={program.currentScheduleId}
+        benefits={program.benefits}
+        nearestSchedule={nearestSchedule}
       />
       <section className="px-4 md:px-8 xl:px-32 2xl:px-96 py-16">
         <h2
@@ -42,9 +46,12 @@ export default function DetailProgram({
           Ikut Juga Kelas Lainnya!
         </h2>
         <div className="flex max-sm:flex-col gap-4 flex-wrap items-center md:items-start justify-center">
-          {programs.slice(0, 4).map((program, id) => (
-            <ProgramCard key={id} type="regular-vertical" data={program} />
-          ))}
+          {programs
+            .slice(0, 4)
+            .filter((program) => program.slug !== params.slug)
+            .map((program, id) => (
+              <ProgramCard key={id} type="regular-vertical" data={program} />
+            ))}
         </div>
       </section>
       <CtaBox>

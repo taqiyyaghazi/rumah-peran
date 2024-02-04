@@ -48,20 +48,22 @@ export interface IProgram {
   slug: string;
   info: string | null;
   title: string;
-  schedule: string;
-  date: string;
-  price: string;
+  time?: string;
+  price: string | null;
   totalSessions: number | null;
   image: string;
-  currentBatch: number;
-  location: string;
-  kuota: string;
-  desc: string;
-  instructors: IInstructor[];
-  materials: IMaterial[];
+  location: string | null;
+  desc: string | null;
+  instructors?: IInstructor[];
+  materials: string[];
   schedules: ISchedule[];
-  currentScheduleId: number;
-  pricePer: string;
+  pricePer: string | null;
+  benefits: IBenefit[];
+}
+
+export interface IBenefit {
+  title: string;
+  icon: string;
 }
 
 export interface IInstructor {
@@ -79,5 +81,6 @@ export interface IMaterial {
 
 export interface ISchedule {
   batch: number;
-  schedule: string;
+  startDate: Date;
+  endDate: Date;
 }
