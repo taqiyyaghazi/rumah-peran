@@ -365,7 +365,7 @@ export const programs: IProgram[] = [
     time: 'Jadwal: Maret, Juni, Agustus, Oktober',
     totalSessions: null,
     image: '/dummy-image.jpeg',
-    location: 'Onsite',
+    location: 'Online',
     desc: 'Kelas penulisan skenario yang tepat bagi pemula hingga profesional untuk menuliskan ide cerita menarik menjadi skenario naskah film layar lebar',
     materials: [
       'Menulis premis, logline, dan sinopsis',
@@ -470,7 +470,7 @@ export const programs: IProgram[] = [
     time: 'Jadwal: 17 Februari 2024',
     totalSessions: null,
     image: '/dummy-image.jpeg',
-    location: 'Onsite',
+    location: 'Online',
     desc: 'Kelas khusus untuk mengetahui lebih dalam mengenai manajemen produksi film dari segi budgeting dan mekanisme teknis di dalamnya serta berkesempatan untuk ikut terlibat dalam produksi film',
     materials: [
       'Budgeting dan funding',
